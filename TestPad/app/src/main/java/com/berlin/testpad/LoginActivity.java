@@ -1,25 +1,21 @@
 package com.berlin.testpad;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.graphics.Paint;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
+import android.content.Context;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -32,6 +28,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.berlin.testpad.user.User;
+
+import org.litepal.crud.DataSupport;
+import org.litepal.crud.callback.FindMultiCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +43,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -66,14 +68,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     private TextView frogetPassView;
+    private List<User> users = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
+//        populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -105,6 +109,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 toFrogetPassInent();
             }
         });
+
+        showLoadingDialog();
+        DataSupport.findAllAsync(User.class).listen(new FindMultiCallback() {
+            @Override
+            public <T> void onFinish(List<T> t) {
+                users = (List<User>) t;
+                dismissLoadingDialog();
+                if (users!=null&&users.size()>0){
+                    User user = users.get(0);
+                    mEmailView.setText(user.getUsername());
+                    mPasswordView.setText(user.getPass());
+                }
+            }
+        });
     }
 
     @Override
@@ -112,7 +130,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = getCurrentFocus();
             if (isShouldHideInput(v, ev)) {
-                if(hideInputMethod(this, v)) {
+                if (hideInputMethod(this, v)) {
                     return true; //隐藏键盘时，其他控件不响应点击事件==》注释则不拦截点击事件
                 }
             }
@@ -131,7 +149,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     public static boolean isShouldHideInput(View v, MotionEvent event) {
         if (v != null && (v instanceof EditText)) {
-            int[] leftTop = { 0, 0 };
+            int[] leftTop = {0, 0};
             v.getLocationInWindow(leftTop);
             int left = leftTop[0], top = leftTop[1], bottom = top + v.getHeight(), right = left
                     + v.getWidth();
@@ -146,7 +164,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         return false;
     }
 
-    private void toFrogetPassInent(){
+    private void toFrogetPassInent() {
 
     }
 
@@ -237,8 +255,23 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
 //            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+            showLoadingDialog();
+            boolean success = false;
+            for (User user : users
+                    ) {
+                if (user.getUsername().equals(email) && user.getPass().equals(password)) {
+                    success = true;
+                    break;
+                }
+            }
+            dismissLoadingDialog();
+            if (success) {
+                Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                focusView = mPasswordView;
+                cancel = true;
+            }
         }
     }
 
@@ -287,7 +320,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 //            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
 //        }
 //    }
-
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         return new CursorLoader(this,
@@ -329,6 +361,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mEmailView.setAdapter(adapter);
+    }
+
+    public void toRegister(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
 
