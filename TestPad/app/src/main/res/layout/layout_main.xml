@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#282828"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_title_bg" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_detail_left_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp">
+
+            <RadioButton
+                android:id="@+id/main_radiobutton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="保障人员"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="保障设施"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="保障装备"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="保障过程"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="保障制度"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="安全等级"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="一票否决指标"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/main_radiobutton8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_detail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="相应整改意见"
+                android:textColor="@android:color/white" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/main_score_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_detail_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/main_score_icon"
+                    android:text="打分明细表"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/main_score_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/ic_score_btn"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="开始打分"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/main_history_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:layout_toLeftOf="@id/main_score_btn"
+                    android:background="@drawable/ic_score_btn"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="查看历史"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:background="#353535"
+                android:id="@+id/main_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

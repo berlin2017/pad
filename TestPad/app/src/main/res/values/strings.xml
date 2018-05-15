@@ -14,4 +14,53 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="part4_1_1">条令条例内容不熟悉、执行不严格的，每人次扣1分；发生违纪问题的，每起扣5分</string>
+    <string name="part4_1_2">连队管理秩序不正规,有“脏、乱、差、散”等问题的，每项扣1分</string>
+    <string name="part4_1_3">官兵作风松散、工作消极的，每人次扣1分</string>
+    <string name="part4_1_4">执行上级指示命令不坚决，传达贯彻落实不到位的，扣2分；未按要求开展的，扣10分；组织不严密、成效不明显扣的，5分；发生误时误事的，每起扣10分</string>
+    <string name="part4_2_1">业务工作未列入党支部重要议事日程的，扣３分</string>
+    <string name="part4_2_2">每月分析业务工作形势，每缺1次的，扣2分</string>
+    <string name="part4_2_3">重大业务事项未经支部专题研究决定的，扣5分</string>
+    <string name="part4_3_1">保障服务意识不强、机务有不良反映的，扣5分</string>
+    <string name="part4_3_2">连队未征求机务人员意见、未做记录的，扣5分</string>
+    <string name="part4_4_1">保障人员不熟悉外场四站保障协同内容、程序和方法，未按规定要求落实的，每人次扣2分</string>
+    <string name="part4_5_1">未组织讲评的每次扣2分</string>
+    <string name="part4_5_2">未进行保障后装备检查的每次扣2分</string>
+    <string name="part4_6_1">重大任务无保障方案、措施和工作总结的，每项扣5分</string>
+    <string name="part4_6_2">重大任务保障力量组配不合理、组织不严密、责任不明确的扣5分</string>
+    <string name="part4_6_3">重大任务保障预想预测不充分、没有应急处理措施、影响保障质量的，扣10分</string>
+    <string name="part4_7_1">连队干部业务工作思路不清晰，履行职责不认真，本职业务情况不熟悉的，每人次扣2分</string>
+    <string name="part4_7_2">连长未经专业培训的，扣５分；个人考核成绩低于90分的，每低1分扣１分</string>
+    <string name="part4_8_1">无年度业务工作计划的，扣10分；制订不规范，分工不明确，针对性、有效性不强的，扣2分</string>
+    <string name="part4_8_2">重大业务活动无实施方案、措施的，扣5分</string>
+    <string name="part4_8_3">业务会议连缺一次扣３分、站缺一次扣2分；业务会议记录要素不全、实效性不强的，扣1分</string>
+    <string name="part4_9_1">连队无技术骨干培养计划的，扣2分；未建立技术骨干梯队的，扣2分</string>
+    <string name="part4_9_2">组训方法单一，训练效果差的，扣3分</string>
+    <string name="part4_9_3">未开展“一专多能”型人才培养的，扣3分</string>
+    <string name="part4_9_4">技术骨干作用不明显、组训能力弱，不能排除较疑难故障的，每人次扣2分</string>
+    <string name="part4_10_1">未按上级下达计划人数送训的，每人次扣３分</string>
+    <string name="part4_10_2">未经专业技术培训上岗的，每人次扣2分</string>
+    <string name="part4_10_3">未取得岗位资格证书上岗的，每人次扣3分；未进行年审的，每人次扣1分</string>
+    <string name="part4_11_1">保障装备检查、准备不充分的，每台次扣2分</string>
+    <string name="part4_11_2">未下达保障作业指令（卡）的，扣2分</string>
+    <string name="part4_11_3">保障人员不熟悉任务计划的，每人次扣2分</string>
+
+
+    <string name="part3_1">严格落实条令条例，管理秩序正规，执行上级指示命令坚决；上级部署的各项任务领导有力、组织严密、成效明显（10分）</string>
+    <string name="part3_2">业务工作列入党支部重要议事日程，定期分析业务工作形势,重大业务事项专题研究决定（15分）</string>
+    <string name="part3_3">牢固树立“三面向、三服务”思想，服务意识强（10分）</string>
+    <string name="part3_4">保障人员熟知外场四站保障协同内容、程序和方法，并且按规定要求落实（15分）</string>
+    <string name="part3_5">及时组织讲评和保障后装备检查，对保障中存在的问题进行研究整改（10分）</string>
+    <string name="part3_6">专机、演习、演练、轮战等重大任务飞行保障组织严密，确保质量和安全（20分）</string>
+    <string name="part3_7">连队干部事业心、责任心强，业务工作思路清晰，熟悉本职业务，履行职责认真（10分）</string>
+    <string name="part3_8">业务工作计划、实施方案制订科学规范，针对性、有效性强；业务会议制度落实，通常连每月、站每周召开一次（10分）</string>
+    <string name="part3_9">技术骨干培养，计划科学合理，方式方法灵活多样，有一支技术精、业务强、作用明显、相对稳定的骨干队伍（20分））</string>
+    <string name="part3_10">专业人员必须经过本专业培训合格并取得空军航材保障人员岗位资格证书的方能上岗，岗位资格证书应当每年由发证机关进行年审（15分）</string>
+    <string name="part3_11">根据保障任务，下达作业指令，做好保障准备（25分）</string>
+
+    <string name="part2">保障人员（150分）</string>
+
+    <string name="part1">航空四站保障安全评价指标（1000分）</string>
+
 </resources>

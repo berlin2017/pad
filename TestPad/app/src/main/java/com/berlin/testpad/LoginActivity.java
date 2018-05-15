@@ -26,6 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ import com.berlin.testpad.user.User;
 
 import org.litepal.crud.DataSupport;
 import org.litepal.crud.callback.FindMultiCallback;
+import org.litepal.crud.callback.UpdateOrDeleteCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     private View mLoginFormView;
     private TextView frogetPassView;
     private List<User> users = new ArrayList<>();
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +106,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         mProgressView = findViewById(R.id.login_progress);
         frogetPassView = findViewById(R.id.login_froget_tv);
         frogetPassView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+        checkBox = findViewById(R.id.login_checkbox);
         frogetPassView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,10 +120,34 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             public <T> void onFinish(List<T> t) {
                 users = (List<User>) t;
                 dismissLoadingDialog();
-                if (users!=null&&users.size()>0){
+                if (users != null && users.size() > 0) {
                     User user = users.get(0);
-                    mEmailView.setText(user.getUsername());
-                    mPasswordView.setText(user.getPass());
+                    if (user.isRemebered()) {
+                        checkBox.setChecked(true);
+                        mEmailView.setText(user.getUsername());
+                        mPasswordView.setText(user.getPass());
+                    }
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showLoadingDialog();
+        DataSupport.findAllAsync(User.class).listen(new FindMultiCallback() {
+            @Override
+            public <T> void onFinish(List<T> t) {
+                users = (List<User>) t;
+                dismissLoadingDialog();
+                if (users != null && users.size() > 0) {
+                    User user = users.get(0);
+                    if (user.isRemebered()) {
+                        checkBox.setChecked(true);
+                        mEmailView.setText(user.getUsername());
+                        mPasswordView.setText(user.getPass());
+                    }
                 }
             }
         });
@@ -257,16 +285,35 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 //            showProgress(true);
             showLoadingDialog();
             boolean success = false;
+            User login_user = null;
             for (User user : users
                     ) {
                 if (user.getUsername().equals(email) && user.getPass().equals(password)) {
                     success = true;
+                    login_user = user;
                     break;
                 }
             }
-            dismissLoadingDialog();
+
             if (success) {
-                Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+                if (checkBox.isChecked()) {
+                    login_user.setRemebered(true);
+                    login_user.updateAsync(login_user.getId()).listen(new UpdateOrDeleteCallback() {
+                        @Override
+                        public void onFinish(int rowsAffected) {
+                            dismissLoadingDialog();
+                            Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }else{
+                    dismissLoadingDialog();
+                    Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
             } else {
                 Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
                 focusView = mPasswordView;
