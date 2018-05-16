@@ -10,6 +10,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.berlin.testpad.user.User;
 
@@ -129,6 +130,7 @@ public class RegisterActivity extends BaseActivity {
                 @Override
                 public void onFinish(boolean success) {
                     dismissLoadingDialog();
+                    Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
                     finish();
                 }
             });

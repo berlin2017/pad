@@ -63,4 +63,203 @@
 
     <string name="part1">航空四站保障安全评价指标（1000分）</string>
 
+    //-----------------第二部分
+
+    <string name="row2_part4_1_1">氧气瓶、氢气瓶同室存放的，扣5分</string>
+    <string name="row2_part4_1_2">各类气瓶未归室分类存放的，扣５分</string>
+    <string name="row2_part4_1_3">气瓶不按规定漆色的，扣3分；摆放不整齐的，扣2分</string>
+    <string name="row2_part4_1_4">气瓶钢印、色标不符合规定要求、不清晰的，每批扣2分</string>
+    <string name="row2_part4_1_5"> 气瓶外借给非供单位的，每只扣2分</string>
+
+    <string name="row2_part4_2_1">带电、带压拆卸修理装备的，扣2分</string>
+    <string name="row2_part4_2_2">修理装备发生安全问题的，扣3分</string>
+    <string name="row2_part4_2_3">高压电器设备保险装置不符要求的，每处扣2分</string>
+    <string name="row2_part4_2_4">气瓶未按规定检验、无记录的，扣10分；仪器仪表不定期校验、无检验标记、无记录的，每个扣1分；安全阀不定期检验调整、无记录的，每处扣1分；压力表、减压阀混用的，每块扣1分</string>
+    <string name="row2_part4_2_5">有标志不清和来历不明气瓶的，每只扣3分</string>
+    <string name="row2_part4_2_6">未接减压器直接用气瓶给轮胎充气的，扣5分</string>
+    <string name="row2_part4_2_7">制氧车无接地线或接地不可靠、接地线材质不符合要求的，每台扣3分</string>
+
+    <string name="row2_part4_3_1">因使用维护不当使航空蓄电池使用寿命达不到要求的，每块扣2分</string>
+    <string name="row2_part4_3_2">报废蓄电池未及时上交的，扣3分</string>
+    <string name="row2_part4_3_3">充电前未检查蓄电池的充电状况，未按照蓄电池的型别和放电程度进行编组接线的，每项扣2分</string>
+    <string name="row2_part4_3_4">充电时，未检查、准确记录蓄电池的充电情况，未保持充电电流正确稳定的，每项扣2分</string>
+    <string name="row2_part4_3_5">新蓄电池充电前应当启封，按规定灌注电解液，经过浸泡后方可充电，并保持充电的连续性。不符合规定的每项扣5分。</string>
+    <string name="row2_part4_4_1">酸性和碱性蓄电池同室存放或充放电的，扣5分</string>
+    <string name="row2_part4_4_2">碱性蓄电池无专人看管的，扣3分；未分类单独存放的，扣2分</string>
+    <string name="row2_part4_4_3">碱性蓄电池、浓硫酸未专室存放，未落实双人双锁管理制度的，每项扣５分；</string>
+    <string name="row2_part4_4_4">碱性充电间安全防范设施不完善的，扣5分</string>
+    <string name="row2_part4_4_5">浓硫酸无使用消耗和检查登记的，每项扣5分</string>
+
+    <string name="row2_part4_5_1">中和剂储存桶满桶、空桶有序分区存放，有标识；漂白粉有序堆放；中和液、漂白粉等有外购记录；不满足每项扣3分</string>
+    <string name="row2_part4_5_2">便携式处理工作设备性能良好，洗消设备压力符合要求；天平、蒸馏水器、干燥箱整洁，工作性能良好；天平安放在牢固的水泥台上，工作台整洁平稳，铺设防滑、减震橡皮布；天平安放位置悬挂挡光窗帘，避免阳关直射；工作间清洁无尘、干燥，不存放无关物品不满足每项扣2分</string>
+    <string name="row2_part4_5_3">化验玻璃器皿不清洁，无序存放，未有标识，每项扣2分</string>
+    <string name="row2_part4_5_4">中和液储罐液位、工作压力在正常数值，不满足每项扣4分</string>
+
+    <string name="row2_part4_6_1">整车外表整洁，内部无杂物、无油垢、灰尘沉积；发电机熔断器额定电流应不小于900A；熔断器不应有机械损伤；熔断器上应保持清洁；接触器、继电器的可动部分不得卡死，紧固件无松动；接触器、继电器接线要正确，安装螺钉不得松动；接触器、继电器触头上无积灰和污垢，保证接触良好；触头烧损后应及时清理。触头磨损至1/3厚度时要更换。不满足每项扣5分</string>
+    <string name="row2_part4_6_2">蓄电池比重如低于1.265，液面高度如低于15 mm ~18mm，扣8分；蓄电池表面要保持清洁，及时清除脏物及接线柱上的氧化物。蓄电池的接线要正确、牢固。二块182蓄电池必须减一单格连接，电压为26V。不满足每项扣4分</string>
+
+    <string name="row2_part4_7_1">与飞机连接的导管、接头不清洁，有杂物；油泵车液压管路有扭曲、变形或裂纹，管路连接和密封处有滴油或渗油现象。每项扣5分</string>
+    <string name="row2_part4_7_2">空调车通风及换热系统性能异常，扣10分 </string>
+    <string name="row2_part4_7_3">空调车有制冷剂泄漏现象，扣5分</string>
+    <string name="row2_part4_7_4">空调车压缩机上的三个接线柱有氧化现象，电源插头和接线柱接触不紧密。每项扣3分</string>
+    <string name="row2_part4_7_5">油泵车液压油混用，油液污染度不符合要求的，每项扣5分</string>
+
+    <string name="row2_part4_8_1">软管库存及中途停用期间，应放置在阴凉干燥处。不满足每项扣3分</string>
+    <string name="row2_part4_8_2">各部导管接头有滑牙现象，扣10分 </string>
+    <string name="row2_part4_8_3">充氧车使用的工具，零件抹布必须保持清洁无油，不满足每项扣15分</string>
+    <string name="row2_part4_9_1">管理不符合要求，每项扣1分</string>
+
+    <string name="row2_part4_10_1">装备主要技术性能指标未达到规定要求的，每台扣5分</string>
+    <string name="row2_part4_10_2">装备完好率每低于规定值1%的，扣2分</string>
+
+    <string name="row2_part4_11_1">装备“四无”率每低于规定值1%的，扣2分</string>
+    <string name="row2_part4_12_1">工作登记(保障作业卡等)、统计和履历本不齐全的，每缺一种扣3分</string>
+    <string name="row2_part4_12_2">工作登记(保障作业卡等)、履历本填写不工整、不规范、不具名修改、要素不全的，每处扣1分</string>
+    <string name="row2_part4_12_3">相同信息在各种登统计之间不一致的，每项扣2分</string>
+    <string name="row2_part4_12_4">工作登记、履历本保管不符合要求的，每一种扣2分</string>
+    <string name="row2_part4_12_5">各类信息卡片填写不规范、不及时、不准确的，扣2分</string>
+
+
+    <string name="row2_part3_1">气瓶按类分室存放，摆放整齐，漆色、钢印、色标符合规定，严格使用管理（25分）</string>
+    <string name="row2_part3_2">电器元件安全可靠，严禁带电、带压拆卸修理设备，仪器仪表、安全阀按规定组织校验检验，各类压力表不能混用；禁止用气瓶直接给轮胎充气（40分）</string>
+    <string name="row2_part3_3">航空蓄电池使用、报废处理按规定执行（35分）</string>
+    <string name="row2_part3_4">禁止酸性和碱性蓄电池同室存放和充放电，碱性蓄电池、强酸有专室存放，专人看管，双人双锁（10分）</string>
+    <string name="row2_part3_5">肼燃料存储、加注、化验等装设备满足规定要求（20分）</string>
+    <string name="row2_part3_6">电源车发电机熔断器、接触器、继电器不应有机械损伤、保持清洁；电缆及插头应符合机种要求；检查蓄电池电解液的比重和液面高度（50分）</string>
+    <string name="row2_part3_7">空调、油泵车连接导管清洁无异物、制冷系统工作良好（30分）</string>
+    <string name="row2_part3_8">充气装备使用导静电链要与地面接触完全；导管接头连接牢固准确，无油脂粘连（50分）</string>
+    <string name="row2_part3_9">脱脂剂、酒精、高锰酸钾等危化药品管理符合要求（10分）</string>
+    <string name="row2_part3_10">四站装备完好率应急机动作战部队、战略预备队部队和重点方向部队达到90%以上，其他部队达到85％以上（30分）</string>
+    <string name="row2_part3_11">四站装备“四无”率达到80%以上（20分）</string>
+    <string name="row2_part3_12">质量管理信息、各种登记、统计和履历本齐全，填写完整规范，保管妥当（30分）</string>
+
+    <string name="row2_part2">保障装备（350分）</string>
+
+    <string name="row2_part1">航空四站保障安全评价指标（1000分）</string>
+
+
+
+    //-----------------第3部分
+
+    <string name="row3_part4_1_1">电气设备绝缘性能不符合规定、未按规定安装接地线、设置避雷设施的，每台扣2分</string>
+    <string name="row3_part4_1_2">工作场所乱拉电线、电线裸露的，扣5分</string>
+
+    <string name="row3_part4_2_1">消防设施、器材不齐全的，每缺一项扣1分；摆放位置不适当的，每处扣1分</string>
+    <string name="row3_part4_2_2">消防器材未定期检查、性能不良或超期使用的，每项扣1分</string>
+    <string name="row3_part4_2_3">制氧制氮站、充电站、肼燃料站工作间不按要求设置安全设施，未设置排风扇、防爆灯、防爆开关等的，每处扣3分</string>
+    <string name="row3_part4_2_4">不会使用消防器材的，每人扣1分</string>
+    <string name="row3_part4_2_5">未设置安全警示标识的，扣5分；安全警示标识不规范、不醒目的，扣2分</string>
+
+    <string name="row3_part4_3_1">每天进行一次查库，内容包括通风、检查设备及仪表的工作状况，填写库房日志。未查库扣5分</string>
+    <string name="row3_part4_4_1">电缆接头及电缆沟内电缆应涂阻火材料，电缆沟不准与其他管沟相通，并宜设火灾预警系统。发现一次违规扣3分</string>
+    <string name="row3_part4_4_2">消防沙池等设置合理，消防设施齐全可用；灭火器剩余压力符合规定，严格按技术要求管理、使用灭火器。</string>
+    <string name="row3_part4_4_3">30米内无明火，适当位置设置“严禁烟火”醒目标志（牌）。</string>
+
+    <string name="row3_part4_5_1">维修设备使用不当、管理不善、不完好的，每台(件)扣1分</string>
+    <string name="row3_part4_5_2">修理班(组)未开展装备维修活动的，扣5分；维修作用发挥不明显的，扣3分</string>
+    <string name="row3_part4_5_3">修理班(组)人员选配不合理的，扣2分</string>
+
+    <string name="row3_part4_6_1">器材、工具、油料未实行“一专”、“五定”、“一建账”的,每项扣５分；未定期清查、账物不相符、摆放不整齐的，每处扣1分</string>
+    <string name="row3_part4_6_2">工具未实行定置管理、无清单的，扣５分；丢失、归位不及时的，每件扣１分</string>
+    <string name="row3_part4_6_3">器材领用手续不符合规定的，每项扣2分</string>
+    <string name="row3_part4_6_4">发生气瓶等丢失现象的，每项扣10分</string>
+
+    <string name="row3_part4_7_1">工作场所秩序乱、有杂物、有异物的，扣3分；环境不整洁的，扣2分</string>
+    <string name="row3_part4_7_2">规章制度、标志、标牌未按规定张挂和设置的，每处扣1分 </string>
+    <string name="row3_part4_7_3">装（设）备、箱架、台柜摆放不整齐的，每处扣1分</string>
+
+    <string name="row3_part4_8_1">质量管理室设施、设备不齐全的，每缺一项扣2分</string>
+    <string name="row3_part4_8_2">质量管理室设备挪作他用的，扣4分</string>
+    <string name="row3_part4_8_3">四站装备质量管理工作无专人负责的，扣3分</string>
+    <string name="row3_part4_8_4">业务资料不齐全、管理混乱、收发记录不准的，每项扣３分</string>
+    <string name="row3_part4_8_5">质量管理员不能熟练掌握系统操作技能的，扣5分；不掌握连队装备数量、质量的，扣3分</string>
+    <string name="row3_part4_8_6">质量管理信息更新维护不及时的，每项扣1分；不准确的，每项扣２分</string>
+    <string name="row3_part4_8_7">未及时打印、下发和回收录入保障维护指令卡片和保障作业卡的，每项扣5分</string>
+    <string name="row3_part4_8_8">信息资料未定期整理、保管不整齐、不清洁的，扣3分</string>
+
+
+
+    <string name="row3_part3_1">电气设备绝缘性能符合规定，接地线安全可靠，避雷设施管理维护良好（20分）</string>
+    <string name="row3_part3_2">安全设施、器材齐全，性能良好，摆放位置适当，会操作使用，警示标识醒目（20分）</string>
+    <string name="row3_part3_3">通风设施良好，建设符合规定（5分）</string>
+    <string name="row3_part3_4">防火、防爆设施建设完备，符合工作要求（10分）</string>
+    <string name="row3_part3_5">维修设备、工具配套完好，修理班(组)作用发挥明显（10分）</string>
+    <string name="row3_part3_6">器材、工具落实“一专”、“五定”、“一建账”的管理要求，账物相符（15分）</string>
+    <string name="row3_part3_7">工作场所秩序井然、环境整洁，张挂、标志、标牌统一规范，装（设）备、箱架摆放整齐（10分）</string>
+    <string name="row3_part3_8">四站质量管理室设施、设备配套齐全，状况良好,有专人负责，按照规定要求开展质量管理工作（30分）</string>
+
+    <string name="row3_part2">保障装备（350分）</string>
+
+    <string name="row3_part1">航空四站保障安全评价指标（1000分）</string>
+
+
+    //-----------------第4部分
+
+    <string name="row4_part4_1_1">飞行用氧未经航医检查签字的，扣10分</string>
+    <string name="row4_part4_1_2">用于飞机保障的氮气质量不符合规定要求的，扣5分</string>
+
+    <string name="row4_part4_2_1">与氧接触的零部件、工具沾有油脂的，每件扣5分</string>
+    <string name="row4_part4_2_2">与氧接触的工具未按规定做涂蓝色标记的，扣2分；混用、混放、混做标记的，每处扣1分</string>
+
+    <string name="row4_part4_3_1">氧气(液氧)、氮气、冷气、航空蓄电池质量不合格的，每项扣10分</string>
+    <string name="row4_part4_3_2">外购氧气(液氧)、氮气无质量证明、未复检的，每批次扣５分；外购浓硫酸、电解液，无质量证明、质量不符合要求的，每批次扣５分</string>
+    <string name="row4_part4_3_3">未填写氧气、高纯氮气质量证明书的，扣3分；氧气、氮气质量未按实际测量值填写的，扣2分</string>
+    <string name="row4_part4_3_4">未按规定检查化验氧纯度（铜氨溶液法）和氮气、肼燃料质量的，扣5分；化验方法不规范、检验不准确的，扣3分</string>
+    <string name="row4_part4_3_5">供应质量影响飞行保障的，扣18分</string>
+
+    <string name="row4_part4_4_1">充装中操作人员站在阀门侧面，启闭阀门速度不得过快、过猛，充气速度大于8立方米/小时的，扣5分；，充装时间少于30min的，扣5分</string>
+    <string name="row4_part4_4_2">灌充气体前，未用灌充工作介质吹除内管的，每项扣3分</string>
+    <string name="row4_part4_4_3">向车内充氧时，被充的氧气瓶內剩余氧气压力不得低于1.5～2.0 MPa。不满足扣5分</string>
+
+    <string name="row4_part4_5_1">未及时按规定组织气体生产和蓄电池充放电，影响保障的，每次扣10分</string>
+    <string name="row4_part4_5_2">修碱性蓄电池启封和起动性能检验无登记的，每块扣5分</string>
+    <string name="row4_part4_5_3">有制氧制氮装备不组织氧、氮气生产的，扣20分</string>
+
+    <string name="row4_part4_6_1">肼燃料，强酸、强碱，易燃、易爆气体未按要求分开存放的，扣10分</string>
+    <string name="row4_part4_6_2">强酸、强碱，易燃、易爆气体等无专人管理、无使用登记的，扣5分</string>
+    <string name="row4_part4_6_3">擅自向非供单位提供物资、器材的，扣5分</string>
+
+    <string name="row4_part4_7_1">不按有关规定进行充氧、加注液氧、通电的，扣5分</string>
+    <string name="row4_part4_7_2">导管或电缆拉坏飞机接口、插座的，扣10分 </string>
+
+    <string name="row4_part4_8_1">工作间基础设施良好，通风装置工作正常;天平工作环境是否符合要求;化验工具清洁，有序存放，有标识;天平、制水设备、干燥箱整洁，工作性能良好;化验记录整洁，记录真实、准确，内容完整;化验药品分类摆放，药品在保质期内;取样、纯度检验、结果计算方法正确，规范。不满足每项扣3分</string>
+    <string name="row4_part4_8_2">加注间设施设备摆放位置准确、固定；固定式废气处理装置、加注设备工作性能良好，仪表在有效检定期内；不满足要求每项扣5分</string>
+    <string name="row4_part4_8_3">燃料泻出与回收管路连接正确，操作规范；更换爆破片操作规范；肼燃料加注管路连接正确，操作规范；加注前物品、管路、急救药品等准备齐全，符合要求；不满足每项扣3分</string>
+    <string name="row4_part4_8_4">加注过程符合双人以上操作，穿戴防护用品；加注间洗消装置、通风设备等设施设备性能良好，仪表在有效检定期内；加注后管路、阀件、防护用品清洗准确规范；不满足每项扣3分</string>
+    <string name="row4_part4_8_5">加注登统计整洁、内容真实准确；加注后废水、废液处理准确；加注后肼燃料箱、回收罐、储罐按要求封存；不满足每项扣3分</string>
+
+    <string name="row4_part4_9_1">装备管理组织不健全的，扣3分；分工不明确的，扣2分</string>
+    <string name="row4_part4_9_2">爱装管装教育、形势分析每月一次，每缺一次扣3分</string>
+    <string name="row4_part4_9_3">连队主官未掌握所属四站装备管理规定、工作程序及质量评估标准的，每人次扣3分；不熟悉装备数质量情况的，每人次扣５分</string>
+
+    <string name="row4_part4_10_1">未梯次使用装备的，每台扣1分；挪作它用的，每台扣5分</string>
+    <string name="row4_part4_10_2">装备“三定”制度不落实的，扣2分</string>
+    <string name="row4_part4_10_3">未按照操作规程使用装备的，每人次扣5分</string>
+    <string name="row4_part4_10_4">停用、待修装备无专人负责管理的，扣1分；不按规定进行封存和保养的，每台扣2分</string>
+    <string name="row4_part4_10_5">乱拆乱卸停用、待修装备部件的，每台扣2分；造成无法恢复的，每台扣3分</string>
+    <string name="row4_part4_10_6">未按要求进行装备日常、定期、换季维护的，每台次扣2分；保障人员未及时按指令卡片维护装备并反馈维护情况的，扣5分</string>
+    <string name="row4_part4_10_7">与飞机连接的导管（电缆）保护套破损、接头不清洁的，每台次扣５分</string>
+    <string name="row4_part4_10_8">装备必备技术文件资料不齐全的，每台扣2分</string>
+    <string name="row4_part4_10_9">装备现有数与配置数不相符的，每缺失一台扣10分</string>
+    <string name="row4_part4_10_10">人为差错造成装（设）备损坏的，每台扣10分</string>
+    <string name="row4_part4_10_11">擅自处理待报废、报废装（设）备的，每台扣20分</string>
+
+
+
+    <string name="row4_part3_1">飞行用氧必须经过航医检查签字，用于飞机保障的氮气质量符合规定要求（15分）</string>
+    <string name="row4_part3_2">与氧接触的零部件、工具严禁和油脂接触，使用前必须按规定要求进行脱脂处理，工具涂蓝色标记，禁止与其它工具混放混用（10分）</string>
+    <string name="row4_part3_3">氧气（液氧）、氮气、冷气、航空蓄电池和肼燃料的质量符合规定要求（30分）</string>
+    <string name="row4_part3_4">气体罐充符合相关规定要求（10分）</string>
+    <string name="row4_part3_5">根据保障任务需求，及时组织气体生产和蓄电池充放电，碱性蓄电池启封和起动性能检验必须有登记（25分）</string>
+    <string name="row4_part3_6">肼燃料，强酸、强碱，专用油液，易燃、易爆气体，有毒有害等物品管理符合规定（25分</string>
+    <string name="row4_part3_7">飞机通电、加油、退弹严禁充氧。灌充和加注液氧时，液氧槽车发动机必须停止工作，周围30米内严禁烟火（15分）</string>
+    <string name="row4_part3_8">肼燃料化验、加注保障作业按要求操作、符合工作手册规定（55分）</string>
+    <string name="row4_part3_9">装备管理组织健全，分工明确，责任落实，定期开展爱装管装教育和形势分析（25分）</string>
+    <string name="row4_part3_10">装备使用、维护工作符合规定（70分）</string>
+
+
+    <string name="row4_part2">保障过程（280分）</string>
+
+    <string name="row4_part1">航空四站保障安全评价指标（1000分）</string>
+
 </resources>

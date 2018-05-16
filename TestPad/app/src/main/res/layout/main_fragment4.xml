@@ -125,7 +125,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_1_1"
+                                    android:text="@string/row4_part4_1_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -136,19 +136,9 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_1_2"
+                                    android:text="@string/row4_part4_1_2"
                                     android:textColor="@android:color/white" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_1_3"
-                                    android:textColor="@android:color/white" />
                             </LinearLayout>
 
                             <TextView
@@ -160,7 +150,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart1_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_1"
+                                android:text="@string/row4_part3_1"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -188,7 +178,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_2_1"
+                                    android:text="@string/row4_part4_2_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -199,19 +189,10 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_2_2"
+                                    android:text="@string/row4_part4_2_2"
                                     android:textColor="@android:color/white" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_2_3"
-                                    android:textColor="@android:color/white" />
+
                             </LinearLayout>
 
                             <TextView
@@ -223,7 +204,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart2_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_2"
+                                android:text="@string/row4_part3_2"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -251,7 +232,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_3_1"
+                                    android:text="@string/row4_part4_3_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -262,7 +243,37 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_3_2"
+                                    android:text="@string/row4_part4_3_2"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_3_3"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_3_4"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_3_5"
                                     android:textColor="@android:color/white" />
                             </LinearLayout>
 
@@ -275,7 +286,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart3_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_3"
+                                android:text="@string/row4_part3_3"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -303,7 +314,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_3_1"
+                                    android:text="@string/row4_part4_4_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -314,8 +325,19 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_4_1"
+                                    android:text="@string/row4_part4_4_2"
                                     android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_4_3"
+                                    android:textColor="@android:color/white" />
+
                             </LinearLayout>
 
                             <TextView
@@ -327,7 +349,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart4_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_4"
+                                android:text="@string/row4_part3_4"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -355,7 +377,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_5_1"
+                                    android:text="@string/row4_part4_5_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -366,7 +388,17 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_5_2"
+                                    android:text="@string/row4_part4_5_2"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_5_3"
                                     android:textColor="@android:color/white" />
                             </LinearLayout>
 
@@ -379,7 +411,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart5_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_5"
+                                android:text="@string/row4_part3_5"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -407,7 +439,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_6_1"
+                                    android:text="@string/row4_part4_6_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -418,9 +450,8 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_6_2"
+                                    android:text="@string/row4_part4_6_2"
                                     android:textColor="@android:color/white" />
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -429,7 +460,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_6_3"
+                                    android:text="@string/row4_part4_6_3"
                                     android:textColor="@android:color/white" />
 
                             </LinearLayout>
@@ -443,7 +474,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart6_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_6"
+                                android:text="@string/row4_part3_6"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -471,7 +502,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_7_1"
+                                    android:text="@string/row4_part4_7_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -482,8 +513,9 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_7_2"
+                                    android:text="@string/row4_part4_7_2"
                                     android:textColor="@android:color/white" />
+
                             </LinearLayout>
 
                             <TextView
@@ -495,7 +527,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart7_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_7"
+                                android:text="@string/row4_part3_7"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -523,7 +555,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_8_1"
+                                    android:text="@string/row4_part4_8_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -534,7 +566,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_8_2"
+                                    android:text="@string/row4_part4_8_2"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -545,7 +577,27 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_8_3"
+                                    android:text="@string/row4_part4_8_3"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_8_4"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_8_5"
                                     android:textColor="@android:color/white" />
 
                             </LinearLayout>
@@ -559,7 +611,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart8_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_8"
+                                android:text="@string/row4_part3_8"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -580,16 +632,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_9_1"
-                                    android:textColor="@android:color/white" />
-
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="4"
+                                android:background="@drawable/tab_shape"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/row4_part4_9_1"
+                                android:textColor="@android:color/white" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -598,9 +649,8 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_9_2"
+                                    android:text="@string/row4_part4_9_2"
                                     android:textColor="@android:color/white" />
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -609,19 +659,9 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_9_3"
+                                    android:text="@string/row4_part4_9_3"
                                     android:textColor="@android:color/white" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_9_4"
-                                    android:textColor="@android:color/white" />
 
                             </LinearLayout>
 
@@ -634,7 +674,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart9_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_9"
+                                android:text="@string/row4_part3_9"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -662,7 +702,7 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_10_1"
+                                    android:text="@string/row4_part4_10_1"
                                     android:textColor="@android:color/white" />
 
                                 <TextView
@@ -673,9 +713,8 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_10_2"
+                                    android:text="@string/row4_part4_10_2"
                                     android:textColor="@android:color/white" />
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -684,8 +723,89 @@
                                     android:background="@drawable/tab_shape"
                                     android:gravity="center"
                                     android:padding="10dp"
-                                    android:text="@string/part4_10_3"
+                                    android:text="@string/row4_part4_10_3"
                                     android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_4"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_5"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_6"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_7"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_8"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_9"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_10"
+                                    android:textColor="@android:color/white" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/row4_part4_10_11"
+                                    android:textColor="@android:color/white" />
+
                             </LinearLayout>
 
                             <TextView
@@ -697,70 +817,7 @@
                                 android:layout_toLeftOf="@id/main_fragment_rightpart10_1"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
-                                android:text="@string/part3_10"
-                                android:textColor="@android:color/white" />
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/main_fragment_rightpart11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@id/main_fragment_rightpart10">
-
-
-                            <LinearLayout
-                                android:id="@+id/main_fragment_rightpart11_1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_11_1"
-                                    android:textColor="@android:color/white" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_11_2"
-                                    android:textColor="@android:color/white" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="4"
-                                    android:background="@drawable/tab_shape"
-                                    android:gravity="center"
-                                    android:padding="10dp"
-                                    android:text="@string/part4_11_3"
-                                    android:textColor="@android:color/white" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/main_fragment_text12"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/main_fragment_rightpart11_1"
-                                android:layout_alignTop="@id/main_fragment_rightpart11_1"
-                                android:layout_toLeftOf="@id/main_fragment_rightpart11_1"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:text="@string/part3_11"
+                                android:text="@string/row4_part3_10"
                                 android:textColor="@android:color/white" />
 
                         </RelativeLayout>
@@ -778,7 +835,7 @@
                         android:background="@drawable/tab_shape"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="@string/part2"
+                        android:text="@string/row4_part2"
                         android:textColor="@android:color/white" />
 
                 </RelativeLayout>

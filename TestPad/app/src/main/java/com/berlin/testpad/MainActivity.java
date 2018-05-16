@@ -1,6 +1,5 @@
 package com.berlin.testpad;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -40,25 +39,25 @@ public class MainActivity extends BaseActivity {
                     fragment = MainFragment.newInstance();
                     break;
                 case R.id.main_radiobutton2:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment2.newInstance();
                     break;
                 case R.id.main_radiobutton3:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment3.newInstance();
                     break;
                 case R.id.main_radiobutton4:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment4.newInstance();
                     break;
                 case R.id.main_radiobutton5:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment5.newInstance();
                     break;
                 case R.id.main_radiobutton6:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment6.newInstance();
                     break;
                 case R.id.main_radiobutton7:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment7.newInstance();
                     break;
                 case R.id.main_radiobutton8:
-                    fragment = MainFragment.newInstance();
+                    fragment = MainFragment8.newInstance();
                     break;
                 default:
                     break;

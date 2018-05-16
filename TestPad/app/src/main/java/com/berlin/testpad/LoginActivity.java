@@ -315,6 +315,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 }
 
             } else {
+                dismissLoadingDialog();
                 Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
                 focusView = mPasswordView;
                 cancel = true;
