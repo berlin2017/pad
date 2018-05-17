@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_choose_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#282828"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_choose_title" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/choose_compute"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_compute" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/choose_compute"
+            android:gravity="center"
+            android:text="选取评估场站"
+            android:textColor="@android:color/white"
+            android:textSize="21sp" />
+
+        <LinearLayout
+            android:onClick="back"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@id/choose_back"
+                android:src="@drawable/ic_back" />
+
+
+            <TextView
+                android:id="@+id/choose_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#4194d7"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:onClick="toScore"
+            android:tag="1"
+            android:layout_margin="60dp"
+            android:text="制氧制氮站"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="toScore"
+            android:tag="2"
+            android:layout_alignParentRight="true"
+            android:layout_margin="60dp"
+            android:text="环控站"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="toScore"
+            android:tag="3"
+            android:layout_centerVertical="true"
+            android:layout_margin="60dp"
+            android:text="充电站"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="toScore"
+            android:tag="4"
+            android:layout_alignParentRight="true"
+            android:layout_margin="60dp"
+            android:text="电源车站"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="toScore"
+            android:tag="5"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="60dp"
+            android:text="充气站"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="toScore"
+            android:tag="6"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="60dp"
+            android:text="肼燃料站"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_choose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

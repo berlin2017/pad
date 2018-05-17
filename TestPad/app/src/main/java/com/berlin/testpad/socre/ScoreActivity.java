@@ -1,15 +1,31 @@
-package com.berlin.testpad;
+package com.berlin.testpad.socre;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 import android.widget.RadioGroup;
+
+import com.berlin.testpad.BaseActivity;
+import com.berlin.testpad.R;
+import com.berlin.testpad.main.MainFragment;
+import com.berlin.testpad.main.MainFragment2;
+import com.berlin.testpad.main.MainFragment3;
+import com.berlin.testpad.main.MainFragment4;
+import com.berlin.testpad.main.MainFragment5;
+import com.berlin.testpad.main.MainFragment6;
+import com.berlin.testpad.main.MainFragment7;
+import com.berlin.testpad.main.MainFragment8;
 
 import java.util.Map;
 import java.util.TreeMap;
 
-public class MainActivity extends BaseActivity {
+/**
+ * Created by ahxmt on 2018/5/17.
+ */
+
+public class ScoreActivity extends BaseActivity {
 
     private RadioGroup radioGroup;
     private Map<Integer, Fragment> mFragments = new TreeMap<Integer, Fragment>();
@@ -18,7 +34,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_main);
+        setContentView(R.layout.layout_score);
         radioGroup = findViewById(R.id.main_radiogroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -81,5 +97,17 @@ public class MainActivity extends BaseActivity {
         }
         transaction.commitAllowingStateLoss();
         mCurrentFragment = fragment;
+    }
+
+    public void back(View view){
+        finish();
+    }
+
+    public void save(View view){
+
+    }
+
+    public void buildCode(View view){
+
     }
 }

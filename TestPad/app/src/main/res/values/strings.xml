@@ -133,7 +133,7 @@
     <string name="row2_part3_11">四站装备“四无”率达到80%以上（20分）</string>
     <string name="row2_part3_12">质量管理信息、各种登记、统计和履历本齐全，填写完整规范，保管妥当（30分）</string>
 
-    <string name="row2_part2">保障装备（350分）</string>
+    <string name="row2_part2">保障设施（120分）</string>
 
     <string name="row2_part1">航空四站保障安全评价指标（1000分）</string>
 
@@ -261,5 +261,50 @@
     <string name="row4_part2">保障过程（280分）</string>
 
     <string name="row4_part1">航空四站保障安全评价指标（1000分）</string>
+
+
+
+    //-----------------第5部分
+
+    <string name="row5_part4_1_1">外场保障车辆不按规定路线与车速行驶和指定位置停放的，每次扣2分；夜航保障时，违反规定使用大灯的，每次扣3分</string>
+    <string name="row5_part4_1_2">违反有关规定，发生车辆碰、刮等问题的，每起扣10分</string>
+    <string name="row5_part4_1_3">违规使用各类转换接头保障飞机的，扣10分</string>
+    <string name="row5_part4_1_4">各种检查、交接、签字手续不符合规定的，每处扣10分</string>
+
+    <string name="row5_part4_2_1">外场供应保障优质安全场次率低于99%的，每低一个百分点扣5分</string>
+    <string name="row5_part4_2_2">电（气）源一次起动不成功的，每次扣5分</string>
+
+    <string name="row5_part4_3_1">安全组织不健全、分工不明确的，扣5分</string>
+    <string name="row5_part4_3_2">传达上级有关安全工作指示精神不及时的，每次扣2分；未传达上级有关安全工作指示精神的，每次扣3分</string>
+
+    <string name="row5_part4_4_1">不按规定开展安全教育、形势分析和隐患排查的，每次扣2分</string>
+    <string name="row5_part4_4_2">未制定安全措施的，扣2分；措施不落实的，扣3分</string>
+    <string name="row5_part4_4_3">连队每月组织一次安全检查，节假日、重大任务未组织专项安全检查的，每次扣2分</string>
+    <string name="row5_part4_4_4">连队、站未定期组织安全技术培训的，扣2分</string>
+
+    <string name="row5_part4_5_1">装备“三化”检查制度不落实的，连队每半年一次，缺一次扣5分；站每季一次，缺一次扣3分</string>
+    <string name="row5_part4_5_2">装备“四无”检查制度不落实的，连队每季一次，缺一次扣2分；站每月一次，缺一次扣1分</string>
+    <string name="row5_part4_5_3">红旗装备操纵员检查制度不落实的，连队每季一次，缺一次扣2分；站每月一次，缺一次扣1分</string>
+
+    <string name="row5_part4_6_1">单装整治维护工作未落实的，每台次扣2分</string>
+    <string name="row5_part4_6_2">技术状态未达到标准要求的，每台次扣2分</string>
+
+    <string name="row5_part4_7_1">保障装备资料管理制度不落实，管理责任不明确的，每项次扣1分</string>
+
+
+
+    <string name="row5_part3_1">严格落实外场保障有关规定，精心实施保障作业，圆满完成飞行保障任务（35分）</string>
+    <string name="row5_part3_2">外场供应保障优质安全场次率达到99%以上，电（气）源一次起动成功率达到100% （20分）</string>
+    <string name="row5_part3_3">安全组织健全，责任分工明确，传达上级有关安全工作指示精神及时，定期组织安全教育和形势分析（10分）</string>
+    <string name="row5_part3_4">科学制定安全措施，定期组织安全检查和技术培训（10分）</string>
+    <string name="row5_part3_5">装备检查评比制度落实，定期开展“三化”、“四无”、“红旗装备操纵员”检查评比活动（10分）</string>
+    <string name="row5_part3_6">单装整治维护工作落实，技术状态达到标准要求（8分）</string>
+    <string name="row5_part3_7">飞保障装备资料管理制度落实，管理责任明确（7分）</string>
+
+
+    <string name="row5_part2">保障制度（100分）</string>
+
+    <string name="row5_part1">航空四站保障安全评价指标（1000分）</string>
+
 
 </resources>

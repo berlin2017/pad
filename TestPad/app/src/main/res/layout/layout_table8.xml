@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="优秀"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="良好"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="合格"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="四站连保障安全（1000）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="该连的四站保障工作整体安全，需继续保持"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="该连四站保障工作整体较好，但存在较小风险。只需在生活、生产、保障时加以注意，或者严格执行相关安全规定、严格按照四站保障规范开展保障，便可以确保四站保障安全。"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="该连四站保障工作存在较多问题，但一般不需要立即采取整改措施，可以事后整改。如在保障完成以后进行整改。安全管理工作还有较大提升空间，需针对检查表所反映出的薄弱环节加以改进。为了体现高标准、严要求的原则。"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="该连四站保障工作存在严重安全隐患，需立即停止保障工作并进行整顿和排查"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

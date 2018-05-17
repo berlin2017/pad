@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="优秀"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="良好"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="合格"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="保障人员（150）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥135分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="135分＞良好≥128分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="128分＞合格≥120分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜120分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="保障装备（350）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥315分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="315分＞良好≥298分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="298分＞合格≥280分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜280分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="保障设施（120）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥108分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="108分＞良好≥102分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="102分＞合格≥96分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜96分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="保障过程（280）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥252分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="252分＞良好≥238分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="238分＞合格≥224分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜224分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="保障制度（100）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥90分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="90分＞良好≥85分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="85分＞合格≥80分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜80分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="四站连保障安全（1000）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="≥900分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="900分＞良好≥850分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="850分＞合格≥800分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="不合格＜800分"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

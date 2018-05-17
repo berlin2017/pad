@@ -31,6 +31,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.berlin.testpad.main.MainActivity;
 import com.berlin.testpad.user.User;
 
 import org.litepal.crud.DataSupport;

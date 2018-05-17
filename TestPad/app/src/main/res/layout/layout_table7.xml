@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="“一票否决”项（有一项该指标不合格则整体安全等级为不合格）"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="气瓶改装或充装介质与气瓶种类不符合的，不得评为达标"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="发生影响战备、重大任务保障问题的，不得评为达标"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="发生等级事故、存在重大安全隐患的，不得评为达标"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="被军区空军以上机关通报批评的，不得评为先进"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="登统计、履历本等填写存在弄虚作假现象的，不得评为先进"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
