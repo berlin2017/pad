@@ -11,14 +11,6 @@ import android.widget.RadioGroup;
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
 import com.berlin.testpad.choose.ChooseActivity;
-import com.berlin.testpad.main.MainFragment;
-import com.berlin.testpad.main.MainFragment2;
-import com.berlin.testpad.main.MainFragment3;
-import com.berlin.testpad.main.MainFragment4;
-import com.berlin.testpad.main.MainFragment5;
-import com.berlin.testpad.main.MainFragment6;
-import com.berlin.testpad.main.MainFragment7;
-import com.berlin.testpad.main.MainFragment8;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -50,28 +42,28 @@ public class MainActivity extends BaseActivity {
         if (fragment == null) {
             switch (id) {
                 case R.id.main_radiobutton1:
-                    fragment = MainFragment.newInstance();
+                    fragment = new MainFragment();
                     break;
                 case R.id.main_radiobutton2:
-                    fragment = MainFragment2.newInstance();
+                    fragment = new MainFragment2();
                     break;
                 case R.id.main_radiobutton3:
-                    fragment = MainFragment3.newInstance();
+                    fragment = new MainFragment3();
                     break;
                 case R.id.main_radiobutton4:
-                    fragment = MainFragment4.newInstance();
+                    fragment = new MainFragment4();
                     break;
                 case R.id.main_radiobutton5:
-                    fragment = MainFragment5.newInstance();
+                    fragment = new MainFragment5();
                     break;
                 case R.id.main_radiobutton6:
-                    fragment = MainFragment6.newInstance();
+                    fragment = new MainFragment6();
                     break;
                 case R.id.main_radiobutton7:
-                    fragment = MainFragment7.newInstance();
+                    fragment = new MainFragment7();
                     break;
                 case R.id.main_radiobutton8:
-                    fragment = MainFragment8.newInstance();
+                    fragment = new MainFragment8();
                     break;
                 default:
                     break;
@@ -97,7 +89,7 @@ public class MainActivity extends BaseActivity {
         mCurrentFragment = fragment;
     }
 
-    public void toChoose(View view){
+    public void toChoose(View view) {
         Intent intent = new Intent(this, ChooseActivity.class);
         startActivity(intent);
     }

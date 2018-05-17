@@ -12,13 +12,6 @@ import com.berlin.testpad.R;
 
 public class MainFragment6 extends Fragment {
 
-    public static MainFragment6 mainFragment;
-
-    public static MainFragment6 newInstance(){
-        if (mainFragment==null)
-            mainFragment = new MainFragment6();
-        return mainFragment;
-    }
 
     @Nullable
     @Override

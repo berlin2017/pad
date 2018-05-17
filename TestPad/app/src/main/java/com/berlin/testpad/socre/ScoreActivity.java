@@ -1,11 +1,16 @@
 package com.berlin.testpad.socre;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
@@ -14,9 +19,8 @@ import com.berlin.testpad.main.MainFragment2;
 import com.berlin.testpad.main.MainFragment3;
 import com.berlin.testpad.main.MainFragment4;
 import com.berlin.testpad.main.MainFragment5;
-import com.berlin.testpad.main.MainFragment6;
-import com.berlin.testpad.main.MainFragment7;
-import com.berlin.testpad.main.MainFragment8;
+import com.google.zxing.WriterException;
+import com.yzq.zxinglibrary.encode.CodeCreator;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -30,6 +34,7 @@ public class ScoreActivity extends BaseActivity {
     private RadioGroup radioGroup;
     private Map<Integer, Fragment> mFragments = new TreeMap<Integer, Fragment>();
     private Fragment mCurrentFragment;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +48,7 @@ public class ScoreActivity extends BaseActivity {
             }
         });
         radioGroup.check(R.id.main_radiobutton1);
+        imageView = findViewById(R.id.score_qcode_image);
     }
 
 
@@ -52,28 +58,19 @@ public class ScoreActivity extends BaseActivity {
         if (fragment == null) {
             switch (id) {
                 case R.id.main_radiobutton1:
-                    fragment = MainFragment.newInstance();
+                    fragment = new ScoreFragment1();
                     break;
                 case R.id.main_radiobutton2:
-                    fragment = MainFragment2.newInstance();
+                    fragment = new ScoreFragment2();
                     break;
                 case R.id.main_radiobutton3:
-                    fragment = MainFragment3.newInstance();
+                    fragment = new ScoreFragment3();
                     break;
                 case R.id.main_radiobutton4:
-                    fragment = MainFragment4.newInstance();
+                    fragment = new ScoreFragment4();
                     break;
                 case R.id.main_radiobutton5:
-                    fragment = MainFragment5.newInstance();
-                    break;
-                case R.id.main_radiobutton6:
-                    fragment = MainFragment6.newInstance();
-                    break;
-                case R.id.main_radiobutton7:
-                    fragment = MainFragment7.newInstance();
-                    break;
-                case R.id.main_radiobutton8:
-                    fragment = MainFragment8.newInstance();
+                    fragment = new ScoreFragment5();
                     break;
                 default:
                     break;
@@ -108,6 +105,31 @@ public class ScoreActivity extends BaseActivity {
     }
 
     public void buildCode(View view){
+        if (imageView.getVisibility() == View.VISIBLE){
+            imageView.setVisibility(View.GONE);
+            return;
+        }
+        String contentEtString = "aaaaaaaaaaaaaaaaaaa";
 
+        if (TextUtils.isEmpty(contentEtString)) {
+            Toast.makeText(this, "contentEtString不能为空", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Bitmap bitmap = null;
+        try {
+            /*
+             * contentEtString：字符串内容
+             * w：图片的宽
+             * h：图片的高
+             * logo：不需要logo的话直接传null
+             * */
+
+            Bitmap logo = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+            bitmap = CodeCreator.createQRCode(contentEtString, 400, 400, logo);
+            imageView.setImageBitmap(bitmap);
+            imageView.setVisibility(View.VISIBLE);
+        } catch (WriterException e) {
+            e.printStackTrace();
+        }
     }
 }

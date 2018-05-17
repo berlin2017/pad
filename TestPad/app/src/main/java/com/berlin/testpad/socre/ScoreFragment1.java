@@ -1,4 +1,4 @@
-package com.berlin.testpad.main;
+package com.berlin.testpad.socre;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,18 +10,14 @@ import android.view.ViewGroup;
 
 import com.berlin.testpad.R;
 
-public class MainFragment8 extends Fragment {
+public class ScoreFragment1 extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_table8,container,false);
+        View view = inflater.inflate(R.layout.layout_score_table1,container,false);
         return view;
     }
 
-    @Override
-    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
-    }
 }
