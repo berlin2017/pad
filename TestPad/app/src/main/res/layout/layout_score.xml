@@ -163,11 +163,11 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_centerVertical="true"
                         android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true"
                         android:layout_margin="10dp"
                         android:layout_toLeftOf="@id/choose_back"
-                        android:src="@drawable/ic_back" />
+                        android:src="@drawable/ic_back_png" />
 
 
                     <TextView
