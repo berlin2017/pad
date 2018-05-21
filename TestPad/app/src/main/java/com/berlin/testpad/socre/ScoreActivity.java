@@ -35,6 +35,7 @@ public class ScoreActivity extends BaseActivity {
     private Map<Integer, Fragment> mFragments = new TreeMap<Integer, Fragment>();
     private Fragment mCurrentFragment;
     private ImageView imageView;
+    private int index;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,8 +48,27 @@ public class ScoreActivity extends BaseActivity {
                 changeFragment(i);
             }
         });
-        radioGroup.check(R.id.main_radiobutton1);
         imageView = findViewById(R.id.score_qcode_image);
+        index = getIntent().getIntExtra("index",0);
+        int id = R.id.main_radiobutton1;
+        switch (index){
+            case 0:
+                id = R.id.main_radiobutton1;
+                break;
+            case 1:
+                id = R.id.main_radiobutton2;
+                break;
+            case 2:
+                id = R.id.main_radiobutton3;
+                break;
+            case 3:
+                id = R.id.main_radiobutton4;
+                break;
+            case 4:
+                id = R.id.main_radiobutton5;
+                break;
+        }
+        radioGroup.check(id);
     }
 
 
@@ -59,18 +79,23 @@ public class ScoreActivity extends BaseActivity {
             switch (id) {
                 case R.id.main_radiobutton1:
                     fragment = new ScoreFragment1();
+                    fragment.setArguments(getIntent().getExtras());
                     break;
                 case R.id.main_radiobutton2:
                     fragment = new ScoreFragment2();
+                    fragment.setArguments(getIntent().getExtras());
                     break;
                 case R.id.main_radiobutton3:
                     fragment = new ScoreFragment3();
+                    fragment.setArguments(getIntent().getExtras());
                     break;
                 case R.id.main_radiobutton4:
                     fragment = new ScoreFragment4();
+                    fragment.setArguments(getIntent().getExtras());
                     break;
                 case R.id.main_radiobutton5:
                     fragment = new ScoreFragment5();
+                    fragment.setArguments(getIntent().getExtras());
                     break;
                 default:
                     break;
@@ -101,7 +126,17 @@ public class ScoreActivity extends BaseActivity {
     }
 
     public void save(View view){
-
+        if(mCurrentFragment instanceof ScoreFragment1){
+            ((ScoreFragment1)mCurrentFragment).save();
+        }else if (mCurrentFragment instanceof ScoreFragment2){
+            ((ScoreFragment2)mCurrentFragment).save();
+        }else if(mCurrentFragment instanceof ScoreFragment3){
+            ((ScoreFragment3)mCurrentFragment).save();
+        }else if(mCurrentFragment instanceof ScoreFragment4){
+            ((ScoreFragment4)mCurrentFragment).save();
+        }else if(mCurrentFragment instanceof ScoreFragment5){
+            ((ScoreFragment5)mCurrentFragment).save();
+        }
     }
 
     public void buildCode(View view){

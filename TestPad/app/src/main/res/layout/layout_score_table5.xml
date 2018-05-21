@@ -67,6 +67,17 @@
                 android:textColor="@android:color/white"
                 android:textSize="17sp" />
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tab_shape"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="整改意见"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
 
         </TableRow>
 
@@ -97,7 +108,7 @@
             <ScrollView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="8">
+                android:layout_weight="10">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -175,6 +186,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -186,6 +198,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -237,6 +260,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -248,6 +272,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -299,6 +334,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -310,6 +346,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -383,6 +430,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -394,6 +442,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -456,6 +515,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -467,6 +527,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -519,6 +590,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -530,6 +602,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
                     <TableRow>
@@ -571,6 +654,7 @@
                             android:background="@drawable/tab_shape">
 
                             <EditText
+                                android:id="@+id/fragment_input7"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -582,6 +666,17 @@
                                 android:textSize="17sp" />
 
                         </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/fragment_suggest_input7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/tab_shape"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
                     </TableRow>
 
 

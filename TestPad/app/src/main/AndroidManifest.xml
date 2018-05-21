@@ -54,6 +54,14 @@
             android:theme="@style/FullScreen">
         </activity>
 
+        <activity
+            android:name=".history.HistoryHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen">
+        </activity>
+
+
     </application>
 
 </manifest>

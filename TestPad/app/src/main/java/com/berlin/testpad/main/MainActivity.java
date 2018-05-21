@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
 import com.berlin.testpad.choose.ChooseActivity;
+import com.berlin.testpad.history.HistoryHomeActivity;
 import com.berlin.testpad.socre.ScoreActivity;
 
 import java.util.Map;
@@ -92,6 +93,11 @@ public class MainActivity extends BaseActivity {
 
     public void toChoose(View view) {
         Intent intent = new Intent(this, ScoreActivity.class);
+        startActivity(intent);
+    }
+
+    public void toHistory(View view) {
+        Intent intent = new Intent(this, HistoryHomeActivity.class);
         startActivity(intent);
     }
 }
