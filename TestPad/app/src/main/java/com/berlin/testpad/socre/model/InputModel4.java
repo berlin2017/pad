@@ -27,7 +27,25 @@ public class InputModel4 {
     private String suggest_fragment_input8;
     private String suggest_fragment_input9;
     private String suggest_fragment_input10;
+    private String suggest_input;
+    private String problem_input;
     private long time;
+
+    public String getSuggest_input() {
+        return suggest_input;
+    }
+
+    public void setSuggest_input(String suggest_input) {
+        this.suggest_input = suggest_input;
+    }
+
+    public String getProblem_input() {
+        return problem_input;
+    }
+
+    public void setProblem_input(String problem_input) {
+        this.problem_input = problem_input;
+    }
 
     public String getSuggest_fragment_input1() {
         return suggest_fragment_input1;

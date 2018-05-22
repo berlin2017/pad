@@ -1,13 +1,18 @@
 package com.berlin.testpad.socre;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,15 +22,32 @@ import com.berlin.testpad.socre.model.InputModel1;
 import com.berlin.testpad.socre.model.InputModel2;
 import com.berlin.testpad.socre.model.ScoreModel;
 import com.berlin.testpad.user.User;
+import com.berlin.testpad.utis.MyUtils;
 import com.google.gson.Gson;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.PrintSetup;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.litepal.crud.DataSupport;
 import org.litepal.crud.callback.FindCallback;
 import org.litepal.crud.callback.FindMultiCallback;
 import org.litepal.crud.callback.SaveCallback;
 import org.litepal.crud.callback.UpdateOrDeleteCallback;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Date;
 import java.util.List;
+
+import static android.provider.ContactsContract.CommonDataKinds.StructuredName.SUFFIX;
 
 public class ScoreFragment1 extends BaseFragment {
 
@@ -52,10 +74,15 @@ public class ScoreFragment1 extends BaseFragment {
     private EditText suggest_editText9;
     private EditText suggest_editText10;
     private EditText suggest_editText11;
+
+    private EditText suggest_edit;
+    private EditText problem_edit;
     private InputModel1 model;
 
     private int id;
     private ScoreModel score_Model;
+
+    private TextInputLayout textInputLayout;
 
 
     @Nullable
@@ -95,6 +122,12 @@ public class ScoreFragment1 extends BaseFragment {
         suggest_editText10 = view.findViewById(R.id.fragment_suggest_input10);
         suggest_editText11 = view.findViewById(R.id.fragment_suggest_input11);
 
+        textInputLayout = view.findViewById(R.id.fragment_input1_layout);
+
+
+        suggest_edit = view.findViewById(R.id.score_suggest_edit);
+        problem_edit = view.findViewById(R.id.score_problem_edit);
+
         showLoadingDialog();
         if (id != 0) {
             DataSupport.findAsync(ScoreModel.class, id).listen(new FindCallback() {
@@ -133,6 +166,42 @@ public class ScoreFragment1 extends BaseFragment {
 
         }
 
+    }
+
+    public boolean verfyEdit(EditText editText, int maxValue, int minValue) {
+        boolean isSuccess = true;
+        ViewParent viewParent = editText.getParent().getParent();
+        if (viewParent instanceof TextInputLayout) {
+            ((TextInputLayout) viewParent).setError(null);
+
+        }
+        if (TextUtils.isEmpty(editText.getText().toString())) {
+            if (viewParent instanceof TextInputLayout) {
+                ((TextInputLayout) viewParent).setError("不能为空");
+            } else {
+                Toast.makeText(getActivity(), "不能为空", Toast.LENGTH_SHORT).show();
+            }
+            isSuccess  = false;
+        }
+        if (Integer.parseInt(editText.getText().toString()) < minValue) {
+            if (viewParent instanceof TextInputLayout) {
+                ((TextInputLayout) viewParent).setError("不能小于" + minValue);
+
+            } else {
+                Toast.makeText(getActivity(), "不能小于" + minValue, Toast.LENGTH_SHORT).show();
+            }
+            isSuccess  = false;
+        }
+        if (Integer.parseInt(editText.getText().toString()) > maxValue) {
+            if (viewParent instanceof TextInputLayout) {
+                ((TextInputLayout) viewParent).setError("不能大于" + maxValue);
+
+            } else {
+                Toast.makeText(getActivity(), "不能大于" + maxValue + minValue, Toast.LENGTH_SHORT).show();
+            }
+            isSuccess  = false;
+        }
+        return isSuccess;
     }
 
     public void updateEdit(InputModel1 inputModel2) {
@@ -181,53 +250,67 @@ public class ScoreFragment1 extends BaseFragment {
             suggest_editText11.setText(inputModel2.getSuggest_fragment_input11());
         }
 
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_input())) {
+            suggest_edit.setText(inputModel2.getSuggest_input());
+        }
+        if (!TextUtils.isEmpty(inputModel2.getProblem_input())) {
+            problem_edit.setText(inputModel2.getProblem_input());
+        }
+
     }
 
     public void save() {
-        if (TextUtils.isEmpty(editText1.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+        if (verfyEdit(editText1, 10, 0)&& verfyEdit(editText2, 15, 0)&&verfyEdit(editText3, 10, 0)&& verfyEdit(editText4, 15, 0)&&verfyEdit(editText5, 10, 0)&&
+        verfyEdit(editText6, 20, 0)&&verfyEdit(editText7, 10, 0)&&verfyEdit(editText8, 10, 0)&&verfyEdit(editText9, 20, 0)&& verfyEdit(editText10, 15, 0)&&verfyEdit(editText11, 25, 0)){
+
+        }else{
             return;
         }
-        if (TextUtils.isEmpty(editText2.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText3.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText4.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText5.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText6.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText7.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText7.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText9.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText10.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(editText11.getText().toString())) {
-            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
+//        if (TextUtils.isEmpty(editText1.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText2.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText3.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText4.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText5.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText6.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText7.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText7.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText9.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText10.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (TextUtils.isEmpty(editText11.getText().toString())) {
+//            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
         ((ScoreActivity) getActivity()).showLoadingDialog();
 
         model = new InputModel1();
@@ -277,6 +360,13 @@ public class ScoreFragment1 extends BaseFragment {
             model.setSuggest_fragment_input11(suggest_editText11.getText().toString());
         }
 
+        if (!TextUtils.isEmpty(suggest_edit.getText().toString())) {
+            model.setSuggest_input(suggest_edit.getText().toString());
+        }
+        if (!TextUtils.isEmpty(problem_edit.getText().toString())) {
+            model.setProblem_input(problem_edit.getText().toString());
+        }
+
 
         model.setTime(System.currentTimeMillis() / 1000);
         Gson gson = new Gson();
@@ -288,6 +378,7 @@ public class ScoreFragment1 extends BaseFragment {
                 public void onFinish(int rowsAffected) {
                     ((ScoreActivity) getActivity()).dismissLoadingDialog();
                     Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
+                    ExcelUtils.writeExecleToFile(getActivity(), score_Model);
                 }
             });
             return;
@@ -312,6 +403,7 @@ public class ScoreFragment1 extends BaseFragment {
                     scoreModel.setFragment1(str);
                     if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
                         scoreModel.setAllDone(true);
+                        ExcelUtils.writeExecleToFile(getActivity(), scoreModel);
                     }
                     scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
                         @Override
@@ -324,6 +416,9 @@ public class ScoreFragment1 extends BaseFragment {
             }
         });
 
+
     }
 
+
 }
+

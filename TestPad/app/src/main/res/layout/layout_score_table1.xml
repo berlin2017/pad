@@ -78,938 +78,1118 @@
                 android:textSize="17sp" />
         </TableRow>
 
-        <TableRow>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/tab_shape"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/part1"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/tab_shape"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="@string/part2"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
-
-            <ScrollView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10">
-
-                <TableLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_shape"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/part1"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_1"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_shape"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/part2"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10">
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_1_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_1_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_1_3"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_1"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_1_1"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_1_2"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_1_3"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/fragment_input1_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
 
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+
+                                    android:id="@+id/fragment_suggest_input1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
 
 
-                    </TableRow>
+                        </TableRow>
 
-                    <TableRow>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_2"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_2_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_2_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_2_3"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_2"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_2_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_2_2"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_2_3"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_3"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_3_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_3_2"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_3"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input3"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_3_1"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_3_2"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_4"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_4_1"
-                                android:textColor="@android:color/white" />
-
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_4"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input4"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_4_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                            </LinearLayout>
 
-                    <TableRow>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_5"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_5_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_5_2"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input5"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_5"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input5"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_5_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_5_2"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                    <TableRow>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_6"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_6_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_6_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_6_3"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input6"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_6"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input6"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_6_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_6_2"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_6_3"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_7"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_7_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_7_2"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input7"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_7"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input7"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_7_1"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_7_2"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_8"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_8_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_8_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_8_3"
-                                android:textColor="@android:color/white" />
-
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input8"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_8"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input8"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_8_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_8_2"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_8_3"
+                                    android:textColor="@android:color/white" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_9"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_9_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_9_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_9_3"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_9_4"
-                                android:textColor="@android:color/white" />
-
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_9"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input9"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_9_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_9_2"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_9_3"
+                                    android:textColor="@android:color/white" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_10"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_9_4"
+                                    android:textColor="@android:color/white" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_10_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_10_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_10_3"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_10"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input10"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_10_1"
+                                    android:textColor="@android:color/white" />
 
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_10_2"
+                                    android:textColor="@android:color/white" />
 
-                    <TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_10_3"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="@string/part3_11"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input10"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow>
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
                                 android:background="@drawable/tab_shape"
                                 android:gravity="center"
                                 android:padding="10dp"
-                                android:text="@string/part4_11_1"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_11_2"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_weight="4"
-                                android:background="@drawable/tab_shape"
-                                android:gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/part4_11_3"
-                                android:textColor="@android:color/white" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/tab_shape">
-
-                            <EditText
-                                android:id="@+id/fragment_input11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_margin="10dp"
-                                android:background="@drawable/ic_edit_bg"
-                                android:gravity="center"
+                                android:text="@string/part3_11"
                                 android:textColor="@android:color/white"
                                 android:textSize="17sp" />
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/fragment_suggest_input11"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="2"
-                            android:background="@drawable/tab_shape"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="17sp" />
-                    </TableRow>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_11_1"
+                                    android:textColor="@android:color/white" />
 
-                </TableLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_11_2"
+                                    android:textColor="@android:color/white" />
 
-            </ScrollView>
-            >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/tab_shape"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/part4_11_3"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
 
-        </TableRow>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_shape">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <EditText
+                                        android:inputType="number"
+                                        android:id="@+id/fragment_input11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/ic_edit_bg"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="17sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/tab_shape">
+
+                                <EditText
+                                    android:id="@+id/fragment_suggest_input11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/ic_edit_bg"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17sp" />
+
+                            </RelativeLayout>
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_score_bottom" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
 
     </TableLayout>

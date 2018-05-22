@@ -33,6 +33,7 @@ import android.widget.Toast;
 
 import com.berlin.testpad.main.MainActivity;
 import com.berlin.testpad.user.User;
+import com.berlin.testpad.user.UserManager;
 
 import org.litepal.crud.DataSupport;
 import org.litepal.crud.callback.FindMultiCallback;
@@ -296,13 +297,16 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 }
             }
 
+            final User finalLogin_user = login_user;
             if (success) {
                 if (checkBox.isChecked()) {
                     login_user.setRemebered(true);
+
                     login_user.updateAsync(login_user.getId()).listen(new UpdateOrDeleteCallback() {
                         @Override
                         public void onFinish(int rowsAffected) {
                             dismissLoadingDialog();
+                            UserManager.saveUser(LoginActivity.this, finalLogin_user);
                             Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
@@ -310,6 +314,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                     });
                 }else{
                     dismissLoadingDialog();
+                    UserManager.saveUser(LoginActivity.this, finalLogin_user);
                     Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
