@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.berlin.testpad.R;
 import com.berlin.testpad.history.model.HistoryModel;
 import com.berlin.testpad.socre.ScoreActivity;
-import com.berlin.testpad.socre.model.ScoreModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

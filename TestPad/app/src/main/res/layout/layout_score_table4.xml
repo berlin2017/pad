@@ -178,7 +178,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input1"
                                         android:layout_width="match_parent"
@@ -268,7 +268,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input2"
                                         android:layout_width="match_parent"
@@ -389,7 +389,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input3"
                                         android:layout_width="match_parent"
@@ -489,7 +489,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input4"
                                         android:layout_width="match_parent"
@@ -588,7 +588,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input5"
                                         android:layout_width="match_parent"
@@ -689,7 +689,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input6"
                                         android:layout_width="match_parent"
@@ -778,7 +778,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input7"
                                         android:layout_width="match_parent"
@@ -901,7 +901,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input8"
                                         android:layout_width="match_parent"
@@ -1003,7 +1003,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input9"
                                         android:layout_width="match_parent"
@@ -1192,7 +1192,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     >
-                                    <EditText
+                                    <android.support.design.widget.TextInputEditText
                                         android:inputType="number"
                                         android:id="@+id/fragment_input10"
                                         android:layout_width="match_parent"

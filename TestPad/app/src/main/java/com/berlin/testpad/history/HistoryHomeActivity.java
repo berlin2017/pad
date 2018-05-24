@@ -17,6 +17,7 @@ import com.berlin.testpad.socre.model.InputModel3;
 import com.berlin.testpad.socre.model.InputModel4;
 import com.berlin.testpad.socre.model.InputModel5;
 import com.berlin.testpad.socre.model.ScoreModel;
+import com.berlin.testpad.user.UserManager;
 import com.google.gson.Gson;
 
 import org.litepal.crud.DataSupport;
@@ -61,9 +62,12 @@ public class HistoryHomeActivity extends BaseActivity {
                     dismissLoadingDialog();
                     return;
                 }else{
-                    for (ScoreModel model:array
-                         ) {
+                    for (int i= array.size()-1;i>=0;i-- ) {
 
+                        ScoreModel model = array.get(i);
+                        if(model.getUser_id() != UserManager.getUser(HistoryHomeActivity.this).getId()){
+                            continue;
+                        }
                         if(!TextUtils.isEmpty(model.getFragment1())){
                             HistoryModel historyModel = new HistoryModel();
                             historyModel.setId(model.getId());

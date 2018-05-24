@@ -10,7 +10,6 @@ import android.widget.RadioGroup;
 
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
-import com.berlin.testpad.choose.ChooseActivity;
 import com.berlin.testpad.history.HistoryHomeActivity;
 import com.berlin.testpad.socre.ScoreActivity;
 

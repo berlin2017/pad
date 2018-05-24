@@ -1,7 +1,9 @@
 package com.berlin.testpad.socre;
 
 import android.content.Context;
+import android.media.MediaScannerConnection;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import com.berlin.testpad.socre.model.InputModel1;
 import com.berlin.testpad.socre.model.InputModel2;
@@ -9,7 +11,6 @@ import com.berlin.testpad.socre.model.InputModel3;
 import com.berlin.testpad.socre.model.InputModel4;
 import com.berlin.testpad.socre.model.InputModel5;
 import com.berlin.testpad.socre.model.ScoreModel;
-import com.berlin.testpad.user.UserManager;
 import com.berlin.testpad.utis.MyUtils;
 import com.google.gson.Gson;
 
@@ -53,6 +54,58 @@ public class ExcelUtils {
     }
 
     //写excel
+    public static void writeExecleToFile(Context context) {
+        ScoreActivity scoreActivity = (ScoreActivity) context;
+        scoreActivity.showLoadingDialog();
+        //创建工作簿
+        Workbook workbook = createWorkbook();
+//        SparseArray<CellStyle> cellStyles=creatCellStyles(workbook);
+//        创建execl中的一个表
+        Sheet sheet = workbook.createSheet();
+         setSheet(sheet);
+
+        //创建第一行
+        Row headerRow=sheet.createRow(0);
+        // 设置第一行：48pt的字体的内容
+        headerRow.setHeightInPoints(60);
+        //创建第一行中第一单元格
+        Cell cell=headerRow.createCell(0);
+        cell.setCellValue(FIRST_ROW_CONTENT);
+//        cell.setCellStyle(cellStyles.get(0));
+        mergingCells(sheet, CellRangeAddress.valueOf("$A$1:$F$1"));
+        //创建第二行
+        Row secondRow=sheet.createRow(1);
+        secondRow.setHeightInPoints(45);
+        for (int i=0;i<2;++i){
+            mergingCells(sheet,new CellRangeAddress(1,1,i*3,i*3+2));
+            Cell cell1=secondRow.createCell(i*3);
+            cell1.setCellValue(SENCOND_VALUES[i]);
+//            cell1.setCellStyle(cellStyles.get(1));
+        }
+        //创建第三行
+        Row threedRow=sheet.createRow(2);
+        threedRow.setHeightInPoints(40);
+        for (int i=0;i<2;++i){
+            for (int j=0;j<3;++j){
+                Cell cell1=threedRow.createCell(i*3+j);
+                cell1.setCellValue(THREE_VALUES[j]);
+//                cell1.setCellStyle(cellStyles.get(2));
+            }
+        }
+        //创建第四行
+        Row fourRow=sheet.createRow(3);
+        fourRow.setHeightInPoints(150);
+        for (int i=0;i<FOUR_VALUES.length;++i){
+            for (int j=0;j<FOUR_VALUES[i].length;++j){
+                Cell cell1=fourRow.createCell(i*3+j);
+                cell1.setCellValue(FOUR_VALUES[i][j]);
+//                cell1.setCellStyle(cellStyles.get(3));
+            }
+        }
+        writeFile(workbook,getFile(context),context);
+    }
+
+        //写excel
     public static void writeExecleToFile(Context context, ScoreModel scoreModel){
 //        ScoreActivity scoreActivity = (ScoreActivity) context;
 //        scoreActivity.showLoadingDialog();
@@ -102,16 +155,24 @@ public class ExcelUtils {
 //            }
 //        }
 
-        InputModel1 inputModel1 = new Gson().fromJson(scoreModel.getFragment1(),InputModel1.class);
+        InputModel1 inputModel1 = null;
+        InputModel2 inputModel2 = null;
+        InputModel3 inputModel3 = null;
+        InputModel4 inputModel4 = null;
+        InputModel5 inputModel5 = null;
+        try{
+            inputModel1 = new Gson().fromJson(scoreModel.getFragment1(),InputModel1.class);
+            inputModel2  = new Gson().fromJson(scoreModel.getFragment2(),InputModel2.class);
+            inputModel3 = new Gson().fromJson(scoreModel.getFragment3(),InputModel3.class);
+            inputModel4 = new Gson().fromJson(scoreModel.getFragment4(),InputModel4.class);
+            inputModel5 = new Gson().fromJson(scoreModel.getFragment5(),InputModel5.class);
+        }catch (Exception e){
+            Toast.makeText(context,"数据有误,写入文件失败",Toast.LENGTH_SHORT).show();
+        }
 
-        InputModel2 inputModel2 = new Gson().fromJson(scoreModel.getFragment2(),InputModel2.class);
-
-        InputModel3 inputModel3 = new Gson().fromJson(scoreModel.getFragment3(),InputModel3.class);
-
-        InputModel4 inputModel4 = new Gson().fromJson(scoreModel.getFragment4(),InputModel4.class);
-
-        InputModel5 inputModel5 = new Gson().fromJson(scoreModel.getFragment5(),InputModel5.class);
-
+        if (inputModel1==null||inputModel2==null||inputModel3==null||inputModel4==null||inputModel5==null){
+            return;
+        }
 
         //第一行
         Row headerR = sheet.createRow(0);
@@ -675,9 +736,6 @@ public class ExcelUtils {
 
 
 
-
-
-
         writeFile(workbook,getFile(context),context);
     }
 
@@ -749,7 +807,7 @@ public class ExcelUtils {
         font1.setBold(true);
         cellStyle1.setFont(font1);
         array.put(1,cellStyle1);
-        //第三行的单元格特征
+//        //第三行的单元格特征
         array.put(2,cellStyle1);
         //第四行的单元格特征
 
@@ -832,8 +890,9 @@ public class ExcelUtils {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-//            ScoreActivity scoreActivity = (ScoreActivity) context;
-//            scoreActivity.showLoadingDialog();
+            MediaScannerConnection.scanFile(context, new String[]{fileName}, null, null);
+            ScoreActivity scoreActivity = (ScoreActivity) context;
+            scoreActivity.dismissLoadingDialog();
             try{
                 if(outputStream!=null){
                     outputStream.close();

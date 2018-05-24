@@ -14,11 +14,6 @@ import android.widget.Toast;
 
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
-import com.berlin.testpad.main.MainFragment;
-import com.berlin.testpad.main.MainFragment2;
-import com.berlin.testpad.main.MainFragment3;
-import com.berlin.testpad.main.MainFragment4;
-import com.berlin.testpad.main.MainFragment5;
 import com.google.zxing.WriterException;
 import com.yzq.zxinglibrary.encode.CodeCreator;
 

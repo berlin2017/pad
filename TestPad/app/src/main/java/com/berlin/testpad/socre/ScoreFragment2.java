@@ -3,8 +3,8 @@ package com.berlin.testpad.socre;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 import com.berlin.testpad.BaseFragment;
 import com.berlin.testpad.R;
-import com.berlin.testpad.socre.model.InputModel1;
 import com.berlin.testpad.socre.model.InputModel2;
 import com.berlin.testpad.socre.model.ScoreModel;
+import com.berlin.testpad.user.UserManager;
 import com.google.gson.Gson;
 
 import org.litepal.crud.DataSupport;
@@ -25,24 +25,23 @@ import org.litepal.crud.callback.FindCallback;
 import org.litepal.crud.callback.FindMultiCallback;
 import org.litepal.crud.callback.SaveCallback;
 import org.litepal.crud.callback.UpdateOrDeleteCallback;
-import org.w3c.dom.Text;
 
 import java.util.List;
 
 public class ScoreFragment2 extends BaseFragment {
 
-    private EditText editText1;
-    private EditText editText2;
-    private EditText editText3;
-    private EditText editText4;
-    private EditText editText5;
-    private EditText editText6;
-    private EditText editText7;
-    private EditText editText8;
-    private EditText editText9;
-    private EditText editText10;
-    private EditText editText11;
-    private EditText editText12;
+    private TextInputEditText editText1;
+    private TextInputEditText editText2;
+    private TextInputEditText editText3;
+    private TextInputEditText editText4;
+    private TextInputEditText editText5;
+    private TextInputEditText editText6;
+    private TextInputEditText editText7;
+    private TextInputEditText editText8;
+    private TextInputEditText editText9;
+    private TextInputEditText editText10;
+    private TextInputEditText editText11;
+    private TextInputEditText editText12;
 
     private EditText suggest_editText1;
     private EditText suggest_editText2;
@@ -380,6 +379,7 @@ public class ScoreFragment2 extends BaseFragment {
                 List<ScoreModel> list = (List<ScoreModel>) t;
                 if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
                     ScoreModel scoreModel = new ScoreModel();
+                    scoreModel.setUser_id(UserManager.getUser(getContext()).getId());
                     scoreModel.setFragment2(str);
                     scoreModel.saveAsync().listen(new SaveCallback() {
                         @Override
