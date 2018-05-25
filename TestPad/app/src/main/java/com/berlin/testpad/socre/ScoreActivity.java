@@ -2,6 +2,7 @@ package com.berlin.testpad.socre;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
+import com.berlin.testpad.socre.model.ScoreModel;
 import com.google.zxing.WriterException;
 import com.yzq.zxinglibrary.encode.CodeCreator;
 
@@ -162,4 +164,5 @@ public class ScoreActivity extends BaseActivity {
             e.printStackTrace();
         }
     }
+
 }

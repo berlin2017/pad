@@ -55,8 +55,7 @@ public class ExcelUtils {
 
     //写excel
     public static void writeExecleToFile(Context context) {
-        ScoreActivity scoreActivity = (ScoreActivity) context;
-        scoreActivity.showLoadingDialog();
+
         //创建工作簿
         Workbook workbook = createWorkbook();
 //        SparseArray<CellStyle> cellStyles=creatCellStyles(workbook);
@@ -107,53 +106,10 @@ public class ExcelUtils {
 
         //写excel
     public static void writeExecleToFile(Context context, ScoreModel scoreModel){
-//        ScoreActivity scoreActivity = (ScoreActivity) context;
-//        scoreActivity.showLoadingDialog();
-        //创建工作簿
-        Workbook workbook=createWorkbook();
-//        SparseArray<CellStyle> cellStyles=creatCellStyles(workbook);
-        //创建execl中的一个表
-        Sheet sheet= workbook.createSheet();
-        // setSheet(sheet);
 
-//        //创建第一行
-//        Row headerRow=sheet.createRow(0);
-//        // 设置第一行：48pt的字体的内容
-//        headerRow.setHeightInPoints(60);
-//        //创建第一行中第一单元格
-//        Cell cell=headerRow.createCell(0);
-//        cell.setCellValue(FIRST_ROW_CONTENT);
-////        cell.setCellStyle(cellStyles.get(0));
-//        mergingCells(sheet, CellRangeAddress.valueOf("$A$1:$F$1"));
-//        //创建第二行
-//        Row secondRow=sheet.createRow(1);
-//        secondRow.setHeightInPoints(45);
-//        for (int i=0;i<2;++i){
-//            mergingCells(sheet,new CellRangeAddress(1,1,i*3,i*3+2));
-//            Cell cell1=secondRow.createCell(i*3);
-//            cell1.setCellValue(SENCOND_VALUES[i]);
-////            cell1.setCellStyle(cellStyles.get(1));
-//        }
-//        //创建第三行
-//        Row threedRow=sheet.createRow(2);
-//        threedRow.setHeightInPoints(40);
-//        for (int i=0;i<2;++i){
-//            for (int j=0;j<3;++j){
-//                Cell cell1=threedRow.createCell(i*3+j);
-//                cell1.setCellValue(THREE_VALUES[j]);
-////                cell1.setCellStyle(cellStyles.get(2));
-//            }
-//        }
-//        //创建第四行
-//        Row fourRow=sheet.createRow(3);
-//        fourRow.setHeightInPoints(150);
-//        for (int i=0;i<FOUR_VALUES.length;++i){
-//            for (int j=0;j<FOUR_VALUES[i].length;++j){
-//                Cell cell1=fourRow.createCell(i*3+j);
-//                cell1.setCellValue(FOUR_VALUES[i][j]);
-////                cell1.setCellStyle(cellStyles.get(3));
-//            }
-//        }
+        Workbook workbook=createWorkbook();
+        Sheet sheet= workbook.createSheet();
+
 
         InputModel1 inputModel1 = null;
         InputModel2 inputModel2 = null;
@@ -167,7 +123,7 @@ public class ExcelUtils {
             inputModel4 = new Gson().fromJson(scoreModel.getFragment4(),InputModel4.class);
             inputModel5 = new Gson().fromJson(scoreModel.getFragment5(),InputModel5.class);
         }catch (Exception e){
-            Toast.makeText(context,"数据有误,写入文件失败",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context,"数据有误,写入文件失败",Toast.LENGTH_SHORT).show();
         }
 
         if (inputModel1==null||inputModel2==null||inputModel3==null||inputModel4==null||inputModel5==null){
@@ -891,8 +847,6 @@ public class ExcelUtils {
             e.printStackTrace();
         }finally {
             MediaScannerConnection.scanFile(context, new String[]{fileName}, null, null);
-            ScoreActivity scoreActivity = (ScoreActivity) context;
-            scoreActivity.dismissLoadingDialog();
             try{
                 if(outputStream!=null){
                     outputStream.close();

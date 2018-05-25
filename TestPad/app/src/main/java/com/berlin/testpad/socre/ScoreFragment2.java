@@ -394,8 +394,10 @@ public class ScoreFragment2 extends BaseFragment {
                     scoreModel.setFragment2(str);
                     if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
                         scoreModel.setAllDone(true);
-                        ExcelUtils.writeExecleToFile(getActivity(),scoreModel);
+                        ((ScoreActivity) getActivity()).showLoadingDialog();
+                        new MyTask(getActivity(),scoreModel).execute();
                     }
+                    ((ScoreActivity) getActivity()).showLoadingDialog();
                     scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
                         @Override
                         public void onFinish(int rowsAffected) {
