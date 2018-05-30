@@ -61,7 +61,6 @@ public class ScoreFragment1 extends BaseFragment {
     private int id;
     private ScoreModel score_Model;
 
-    private TextInputLayout textInputLayout;
 
 
     @Nullable
@@ -101,7 +100,6 @@ public class ScoreFragment1 extends BaseFragment {
         suggest_editText10 = view.findViewById(R.id.fragment_suggest_input10);
         suggest_editText11 = view.findViewById(R.id.fragment_suggest_input11);
 
-        textInputLayout = view.findViewById(R.id.fragment_input1_layout);
 
 
         suggest_edit = view.findViewById(R.id.score_suggest_edit);
@@ -132,6 +130,10 @@ public class ScoreFragment1 extends BaseFragment {
                         dismissLoadingDialog();
                     } else {
                         ScoreModel scoreModel = list.get(list.size() - 1);
+                        if(scoreModel.getUser_id() != UserManager.getUser(getActivity()).getId()){
+                            dismissLoadingDialog();
+                            return;
+                        }
                         if (!TextUtils.isEmpty(scoreModel.getFragment1())) {
                             Gson gson = new Gson();
                             InputModel1 inputModel2 = gson.fromJson(scoreModel.getFragment1(), InputModel1.class);
@@ -148,7 +150,6 @@ public class ScoreFragment1 extends BaseFragment {
     }
 
     public boolean verfyEdit(EditText editText, int maxValue, int minValue) {
-        boolean isSuccess = true;
         ViewParent viewParent = editText.getParent().getParent();
         if (viewParent instanceof TextInputLayout) {
             ((TextInputLayout) viewParent).setError(null);
@@ -160,7 +161,7 @@ public class ScoreFragment1 extends BaseFragment {
             } else {
                 Toast.makeText(getActivity(), "不能为空", Toast.LENGTH_SHORT).show();
             }
-            isSuccess  = false;
+            return false;
         }
         if (Integer.parseInt(editText.getText().toString()) < minValue) {
             if (viewParent instanceof TextInputLayout) {
@@ -169,7 +170,7 @@ public class ScoreFragment1 extends BaseFragment {
             } else {
                 Toast.makeText(getActivity(), "不能小于" + minValue, Toast.LENGTH_SHORT).show();
             }
-            isSuccess  = false;
+            return false;
         }
         if (Integer.parseInt(editText.getText().toString()) > maxValue) {
             if (viewParent instanceof TextInputLayout) {
@@ -178,9 +179,9 @@ public class ScoreFragment1 extends BaseFragment {
             } else {
                 Toast.makeText(getActivity(), "不能大于" + maxValue + minValue, Toast.LENGTH_SHORT).show();
             }
-            isSuccess  = false;
+            return false;
         }
-        return isSuccess;
+        return true;
     }
 
     public void updateEdit(InputModel1 inputModel2) {
@@ -383,8 +384,9 @@ public class ScoreFragment1 extends BaseFragment {
                     scoreModel.setFragment1(str);
                     if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
                         scoreModel.setAllDone(true);
-                        ((ScoreActivity) getActivity()).showLoadingDialog();
-                        new MyTask(getActivity(),scoreModel).execute();
+                        //                        ((ScoreActivity) getActivity()).showLoadingDialog();
+//                        new MyTask(getActivity(),scoreModel).execute();
+                        showNameDialog();
                     }
                     ((ScoreActivity) getActivity()).showLoadingDialog();
                     scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {

@@ -11,6 +11,7 @@ import com.berlin.testpad.socre.model.InputModel3;
 import com.berlin.testpad.socre.model.InputModel4;
 import com.berlin.testpad.socre.model.InputModel5;
 import com.berlin.testpad.socre.model.ScoreModel;
+import com.berlin.testpad.user.UserManager;
 import com.berlin.testpad.utis.MyUtils;
 import com.google.gson.Gson;
 
@@ -648,7 +649,7 @@ public class ExcelUtils {
         row13_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input12());
 
 
-        Row row14_suggest = sheet.createRow(26);
+        Row row14_suggest = sheet.createRow(27);
         row14_suggest.setHeightInPoints(200);
         Cell row14_suggest_cell1=row14_suggest.createCell(0);
         row14_suggest_cell1.setCellValue("总意见");
@@ -669,7 +670,7 @@ public class ExcelUtils {
         row14_suggest_cell6.setCellValue(inputModel5.getSuggest_input());
 
 
-        Row row15_suggest = sheet.createRow(27);
+        Row row15_suggest = sheet.createRow(26);
         row15_suggest.setHeightInPoints(200);
         Cell row15_suggest_cell1=row15_suggest.createCell(0);
         row15_suggest_cell1.setCellValue("总问题");
@@ -688,6 +689,12 @@ public class ExcelUtils {
 
         Cell row15_suggest_cell6=row15_suggest.createCell(5);
         row15_suggest_cell6.setCellValue(inputModel5.getProblem_input());
+
+
+        Row name = sheet.createRow(29);
+        Cell name_cell = name.createCell(0);
+        name_cell.setCellValue("测评员:"+UserManager.getUser(context).getUsername());
+        mergingCells(sheet,CellRangeAddress.valueOf("$A$1:$F$1"));
 
 
 
