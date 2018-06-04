@@ -13,10 +13,14 @@ public class MyTask extends AsyncTask<Void,Void,Void>{
 
     private Context context;
     private ScoreModel scoreModel;
+    private String path;
+    private String name;
 
-    public MyTask(Context context, ScoreModel scoreModel) {
+    public MyTask(Context context, ScoreModel scoreModel, String path, String name) {
         this.context = context;
         this.scoreModel = scoreModel;
+        this.path = path;
+        this.name = name;
     }
 
     @Override
@@ -24,7 +28,7 @@ public class MyTask extends AsyncTask<Void,Void,Void>{
         if (scoreModel==null){
             ExcelUtils.writeExecleToFile(context);
         }else{
-            ExcelUtils.writeExecleToFile(context,scoreModel);
+            ExcelUtils.writeExecleToFile(context,scoreModel,path,name);
         }
 
         return null;

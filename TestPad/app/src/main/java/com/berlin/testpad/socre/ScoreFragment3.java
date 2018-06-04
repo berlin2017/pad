@@ -28,7 +28,7 @@ import org.litepal.crud.callback.UpdateOrDeleteCallback;
 
 import java.util.List;
 
-public class ScoreFragment3 extends BaseFragment {
+public class ScoreFragment3 extends BaseFragment  implements BaseFragment.OnSaveFileInterface{
 
     private TextInputEditText editText1;
     private TextInputEditText editText2;
@@ -128,6 +128,7 @@ public class ScoreFragment3 extends BaseFragment {
                 }
             });
         }
+        setOnFileSaveInterface(this);
     }
 
     public void updateEdit(InputModel3 inputModel2) {
@@ -303,8 +304,9 @@ public class ScoreFragment3 extends BaseFragment {
                 @Override
                 public void onFinish(int rowsAffected) {
                     ((ScoreActivity) getActivity()).dismissLoadingDialog();
-                    Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
-                    ExcelUtils.writeExecleToFile(getActivity(),score_Model);
+//                    Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
+//                    ExcelUtils.writeExecleToFile(getActivity(),score_Model);
+                    showNameDialog(score_Model);
                 }
             });
             return;
@@ -332,7 +334,7 @@ public class ScoreFragment3 extends BaseFragment {
                         scoreModel.setAllDone(true);
                         //                        ((ScoreActivity) getActivity()).showLoadingDialog();
 //                        new MyTask(getActivity(),scoreModel).execute();
-                        showNameDialog();
+                        showNameDialog(scoreModel);
                     }
                     ((ScoreActivity) getActivity()).showLoadingDialog();
                     scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
@@ -347,6 +349,11 @@ public class ScoreFragment3 extends BaseFragment {
         });
 
 
+    }
+
+    @Override
+    public void onConfirm(ScoreModel scoreModel, String path, String name) {
+        new MyTask(getActivity(),scoreModel,path,name).execute();
     }
 
 }
