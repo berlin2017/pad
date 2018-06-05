@@ -146,6 +146,7 @@ public class ExcelUtils {
         Cell cell5 = headerR.createCell(5);
         cell5.setCellValue("保障制度");
 
+
         //第二行
 
         Row secondRow = sheet.createRow(1);
@@ -277,6 +278,7 @@ public class ExcelUtils {
 
         Row row12_suggest = sheet.createRow(22);
         row12_suggest.setHeightInPoints(100);
+
         Cell row12_suggest_cell1 = row12_suggest.createCell(0);
         row12_suggest_cell1.setCellValue("第十一个意见");
 
@@ -288,24 +290,26 @@ public class ExcelUtils {
 
         Row row13_suggest = sheet.createRow(24);
         row13_suggest.setHeightInPoints(100);
+
         Cell row13_suggest_cell1 = row13_suggest.createCell(0);
         row13_suggest_cell1.setCellValue("第十二个意见");
 
 
         Row row14_suggest = sheet.createRow(27);
         row14_suggest.setHeightInPoints(200);
+
         Cell row14_suggest_cell1 = row14_suggest.createCell(0);
         row14_suggest_cell1.setCellValue("总意见");
 
 
         Row row15_suggest = sheet.createRow(26);
         row15_suggest.setHeightInPoints(200);
+
         Cell row15_suggest_cell1 = row15_suggest.createCell(0);
         row15_suggest_cell1.setCellValue("总问题");
 
 
-
-        if(inputModel1!=null){
+        if (inputModel1 != null) {
             Cell secondRow_cell2 = secondRow.createCell(1);
             secondRow_cell2.setCellValue(inputModel1.getFragment_input1());
 
@@ -379,11 +383,9 @@ public class ExcelUtils {
             row15_suggest_cell2.setCellValue(inputModel1.getProblem_input());
 
 
-
-
         }
 
-        if (inputModel2!=null){
+        if (inputModel2 != null) {
             Cell secondRow_cell3 = secondRow.createCell(2);
             secondRow_cell3.setCellValue(inputModel2.getFragment_input1());
 
@@ -426,8 +428,6 @@ public class ExcelUtils {
             row8_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input7());
 
 
-
-
             Cell row9_cell3 = row9.createCell(2);
             row9_cell3.setCellValue(inputModel2.getFragment_input8());
 
@@ -466,7 +466,7 @@ public class ExcelUtils {
             row15_suggest_cell3.setCellValue(inputModel2.getProblem_input());
         }
 
-        if(inputModel3!=null){
+        if (inputModel3 != null) {
             Cell secondRow_cell4 = secondRow.createCell(3);
             secondRow_cell4.setCellValue(inputModel3.getFragment_input1());
             Cell secondRow_suggest_cell4 = secondRow_suggest.createCell(3);
@@ -524,7 +524,7 @@ public class ExcelUtils {
 
         }
 
-        if(inputModel4!=null){
+        if (inputModel4 != null) {
             Cell secondRow_cell5 = secondRow.createCell(4);
             secondRow_cell5.setCellValue(inputModel4.getFragment_input1());
             Cell secondRow_suggest_cell5 = secondRow_suggest.createCell(4);
@@ -592,7 +592,7 @@ public class ExcelUtils {
 
         }
 
-        if(inputModel5!=null){
+        if (inputModel5 != null) {
             Cell secondRow_cell6 = secondRow.createCell(5);
             secondRow_cell6.setCellValue(inputModel5.getFragment_input1());
             Cell secondRow_suggest_cell6 = secondRow_suggest.createCell(5);
@@ -670,7 +670,6 @@ public class ExcelUtils {
         Row name1 = sheet.createRow(29);
         Cell name_cell = name1.createCell(0);
         name_cell.setCellValue("测评员:" + UserManager.getUser(context).getUsername());
-        mergingCells(sheet, CellRangeAddress.valueOf("$A$1:$F$1"));
 
 
         File file = new File(path);

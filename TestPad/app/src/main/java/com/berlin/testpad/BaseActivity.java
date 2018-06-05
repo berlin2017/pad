@@ -32,12 +32,12 @@ public class BaseActivity extends AppCompatActivity {
     private AlertDialog name_dialog;
     private OnSaveFileInterface onSaveFileInterface;
 
-    public void setOnFileSaveInterface(OnSaveFileInterface onSaveFileInterface){
+    public void setOnFileSaveInterface(OnSaveFileInterface onSaveFileInterface) {
         this.onSaveFileInterface = onSaveFileInterface;
     }
 
     public void showLoadingDialog() {
-        if (alertDialog!=null){
+        if (alertDialog != null) {
             alertDialog.show();
             return;
         }
@@ -64,12 +64,12 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
-        if ( alertDialog!=null && alertDialog.isShowing() ){
+        if (alertDialog != null && alertDialog.isShowing()) {
             alertDialog.dismiss();
         }
-        if ( name_dialog!=null && name_dialog.isShowing() ){
+        if (name_dialog != null && name_dialog.isShowing()) {
             name_dialog.dismiss();
         }
     }
@@ -115,15 +115,20 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    public void showNameDialog(final ScoreModel scoreModel){
-        if (name_dialog!=null){
+    public void showNameDialog(final ScoreModel scoreModel) {
+        if (name_dialog != null) {
             name_dialog.show();
             return;
         }
-        View view = LayoutInflater.from(this).inflate(R.layout.layout_dialog,null);
+        View view = LayoutInflater.from(this).inflate(R.layout.layout_dialog, null);
         final EditText editText = view.findViewById(R.id.dialog_name_edit);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        editText.setText( simpleDateFormat.format(new Date()));
+        if (scoreModel.getFile_name() != null && scoreModel.isSave_success()) {
+            editText.setText(scoreModel.getFile_name());
+        } else {
+            editText.setText(simpleDateFormat.format(new Date()));
+        }
+
         Button button = view.findViewById(R.id.dialog_choose);
         final TextView textView = view.findViewById(R.id.dialog_path);
         textView.setText(MyUtils.getCacheFile(this, ExcelUtils.DIR_FILE_NAME).getAbsolutePath());
@@ -152,13 +157,13 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //确定
-                if(TextUtils.isEmpty(editText.getText().toString())){
-                    Toast.makeText(getApplicationContext(),"文件名不能为空",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(editText.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "文件名不能为空", Toast.LENGTH_SHORT).show();
                     showNameDialog(scoreModel);
                     return;
                 }
-                if(onSaveFileInterface!=null){
-                    onSaveFileInterface.onConfirm(scoreModel,textView.getText().toString(),editText.getText().toString());
+                if (onSaveFileInterface != null) {
+                    onSaveFileInterface.onConfirm(scoreModel, textView.getText().toString(), editText.getText().toString());
                 }
             }
         }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -178,8 +183,8 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public interface OnSaveFileInterface{
-        void onConfirm(ScoreModel scoreModel,String path,String name);
+    public interface OnSaveFileInterface {
+        void onConfirm(ScoreModel scoreModel, String path, String name);
     }
 
 }

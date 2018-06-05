@@ -2,7 +2,6 @@ package com.berlin.testpad.socre;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -222,9 +221,6 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
 
     @Override
     public void onConfirm(ScoreModel scoreModel, String path, String name) {
-        scoreModel.setFile_path(path);
-        scoreModel.setFile_name(name);
-        scoreModel.updateAsync(scoreModel.getId());
         new MyTask(this,scoreModel,path,name).execute();
     }
 

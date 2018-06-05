@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 
 import com.berlin.testpad.socre.model.ScoreModel;
 
+import org.litepal.crud.callback.UpdateOrDeleteCallback;
+
 /**
  * Created by ahxmt on 2018/5/25.
  */
@@ -24,6 +26,21 @@ public class MyTask extends AsyncTask<Void, Void, Void> {
     }
 
     @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        scoreModel.setSave_success(true);
+        scoreModel.setFile_name(name);
+        scoreModel.setFile_path(path);
+        scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
+            @Override
+            public void onFinish(int rowsAffected) {
+                ScoreActivity scoreActivity = (ScoreActivity) context;
+                scoreActivity.dismissLoadingDialog();
+            }
+        });
+    }
+
+    @Override
     protected Void doInBackground(Void... voids) {
         if (scoreModel == null) {
             ExcelUtils.writeExecleToFile(context);
@@ -37,9 +54,7 @@ public class MyTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        scoreModel.setSave_success(true);
-        scoreModel.updateAsync(scoreModel.getId());
         ScoreActivity scoreActivity = (ScoreActivity) context;
-        scoreActivity.dismissLoadingDialog();
+        scoreActivity.showLoadingDialog();
     }
 }

@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <EditText
         android:id="@+id/dialog_name_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="输入名称"/>
+        android:hint="输入名称" />
 
     <LinearLayout
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:text="路径:"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="路径:" />
 
         <TextView
             android:id="@+id/dialog_path"
-            android:textSize="17sp"
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/dialog_choose"
-            android:layout_marginLeft="10dp"
-            android:gravity="right|center_vertical"
-            android:background="@null"
-            android:text="更改"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:padding="10dp"
+            android:text="更改" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>
