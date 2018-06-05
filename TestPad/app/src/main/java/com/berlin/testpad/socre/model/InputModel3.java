@@ -1,10 +1,12 @@
 package com.berlin.testpad.socre.model;
 
+import java.io.Serializable;
+
 /**
  * Created by ahxmt on 2018/5/21.
  */
 
-public class InputModel3 {
+public class InputModel3 implements Serializable {
     private int id;
     private String fragment_input1;
     private String fragment_input2;

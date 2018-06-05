@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.berlin.testpad.BaseFragment;
 import com.berlin.testpad.R;
+import com.berlin.testpad.socre.model.InputModel1;
 import com.berlin.testpad.socre.model.InputModel2;
 import com.berlin.testpad.socre.model.ScoreModel;
 import com.berlin.testpad.user.UserManager;
@@ -28,7 +29,7 @@ import org.litepal.crud.callback.UpdateOrDeleteCallback;
 
 import java.util.List;
 
-public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSaveFileInterface{
+public class ScoreFragment2 extends BaseFragment {
 
     private TextInputEditText editText1;
     private TextInputEditText editText2;
@@ -60,7 +61,6 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
     private EditText problem_edit;
     private InputModel2 model;
 
-    private int id;
     private ScoreModel score_Model;
 
 
@@ -75,9 +75,6 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (getArguments()!=null){
-            id = getArguments().getInt("id",0);
-        }
         editText1 = view.findViewById(R.id.fragment_input1);
         editText2 = view.findViewById(R.id.fragment_input2);
         editText3 = view.findViewById(R.id.fragment_input3);
@@ -108,19 +105,16 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
         problem_edit = view.findViewById(R.id.score_problem_edit);
 
         showLoadingDialog();
-        if (id != 0) {
-            DataSupport.findAsync(ScoreModel.class, id).listen(new FindCallback() {
-                @Override
-                public <T> void onFinish(T t) {
-                    score_Model = (ScoreModel) t;
-                    if (!TextUtils.isEmpty(score_Model.getFragment2())) {
-                        Gson gson = new Gson();
-                        InputModel2 inputModel2 = gson.fromJson(score_Model.getFragment2(), InputModel2.class);
-                       updateEdit(inputModel2);
-                    }
-                    dismissLoadingDialog();
-                }
-            });
+        if (getArguments() != null) {
+            score_Model = (ScoreModel) getArguments().getSerializable("id");
+        }
+        if (score_Model != null) {
+            if (!TextUtils.isEmpty(score_Model.getFragment2())) {
+                Gson gson = new Gson();
+                InputModel2 inputModel2 = gson.fromJson(score_Model.getFragment2(), InputModel2.class);
+                updateEdit(inputModel2);
+            }
+            dismissLoadingDialog();
         } else {
             DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
                 @Override
@@ -145,8 +139,6 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
                 }
             });
         }
-
-        setOnFileSaveInterface(this);
     }
 
     public void updateEdit(InputModel2 inputModel2) {
@@ -367,14 +359,14 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
         Gson gson = new Gson();
         final String str = gson.toJson(model);
         if (score_Model != null) {
-            score_Model.setFragment1(str);
+            score_Model.setFragment2(str);
             score_Model.updateAsync(score_Model.getId()).listen(new UpdateOrDeleteCallback() {
                 @Override
                 public void onFinish(int rowsAffected) {
                     ((ScoreActivity) getActivity()).dismissLoadingDialog();
 //                    Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
 //                    ExcelUtils.writeExecleToFile(getActivity(),score_Model);
-                    showNameDialog(score_Model);
+//                    showNameDialog(score_Model);
                 }
             });
             return;
@@ -402,7 +394,7 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
                         scoreModel.setAllDone(true);
                         //                        ((ScoreActivity) getActivity()).showLoadingDialog();
 //                        new MyTask(getActivity(),scoreModel).execute();
-                        showNameDialog(scoreModel);
+//                        showNameDialog(scoreModel);
                     }
                     ((ScoreActivity) getActivity()).showLoadingDialog();
                     scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
@@ -418,9 +410,5 @@ public class ScoreFragment2 extends BaseFragment  implements BaseFragment.OnSave
 
     }
 
-    @Override
-    public void onConfirm(ScoreModel scoreModel, String path, String name) {
-        new MyTask(getActivity(),scoreModel,path,name).execute();
-    }
 
 }

@@ -2,11 +2,13 @@ package com.berlin.testpad.socre.model;
 
 import org.litepal.crud.DataSupport;
 
+import java.io.Serializable;
+
 /**
  * Created by ahxmt on 2018/5/21.
  */
 
-public class ScoreModel extends DataSupport{
+public class ScoreModel extends DataSupport implements Serializable {
     private int id;
     private boolean isAllDone;
     private String fragment1;
@@ -15,6 +17,33 @@ public class ScoreModel extends DataSupport{
     private String fragment4;
     private String fragment5;
     private int user_id;
+    private String file_path;
+    private String file_name;
+    private boolean save_success;
+
+    public String getFile_path() {
+        return file_path;
+    }
+
+    public void setFile_path(String file_path) {
+        this.file_path = file_path;
+    }
+
+    public String getFile_name() {
+        return file_name;
+    }
+
+    public void setFile_name(String file_name) {
+        this.file_name = file_name;
+    }
+
+    public boolean isSave_success() {
+        return save_success;
+    }
+
+    public void setSave_success(boolean save_success) {
+        this.save_success = save_success;
+    }
 
     public int getUser_id() {
         return user_id;

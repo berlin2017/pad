@@ -9,7 +9,7 @@ import com.berlin.testpad.socre.model.ScoreModel;
  * Created by ahxmt on 2018/5/25.
  */
 
-public class MyTask extends AsyncTask<Void,Void,Void>{
+public class MyTask extends AsyncTask<Void, Void, Void> {
 
     private Context context;
     private ScoreModel scoreModel;
@@ -25,10 +25,10 @@ public class MyTask extends AsyncTask<Void,Void,Void>{
 
     @Override
     protected Void doInBackground(Void... voids) {
-        if (scoreModel==null){
+        if (scoreModel == null) {
             ExcelUtils.writeExecleToFile(context);
-        }else{
-            ExcelUtils.writeExecleToFile(context,scoreModel,path,name);
+        } else {
+            ExcelUtils.writeExecleToFile(context, scoreModel, path, name);
         }
 
         return null;
@@ -37,6 +37,8 @@ public class MyTask extends AsyncTask<Void,Void,Void>{
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        scoreModel.setSave_success(true);
+        scoreModel.updateAsync(scoreModel.getId());
         ScoreActivity scoreActivity = (ScoreActivity) context;
         scoreActivity.dismissLoadingDialog();
     }

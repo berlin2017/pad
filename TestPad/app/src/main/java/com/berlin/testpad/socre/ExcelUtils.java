@@ -126,9 +126,6 @@ public class ExcelUtils {
 //            Toast.makeText(context,"数据有误,写入文件失败",Toast.LENGTH_SHORT).show();
         }
 
-        if (inputModel1 == null || inputModel2 == null || inputModel3 == null || inputModel4 == null || inputModel5 == null) {
-            return;
-        }
 
         //第一行
         Row headerR = sheet.createRow(0);
@@ -156,40 +153,10 @@ public class ExcelUtils {
         Cell secondRow_cell1 = secondRow.createCell(0);
         secondRow_cell1.setCellValue("第一个分数");
 
-        Cell secondRow_cell2 = secondRow.createCell(1);
-        secondRow_cell2.setCellValue(inputModel1.getFragment_input1());
-
-        Cell secondRow_cell3 = secondRow.createCell(2);
-        secondRow_cell3.setCellValue(inputModel2.getFragment_input1());
-
-        Cell secondRow_cell4 = secondRow.createCell(3);
-        secondRow_cell4.setCellValue(inputModel3.getFragment_input1());
-
-        Cell secondRow_cell5 = secondRow.createCell(4);
-        secondRow_cell5.setCellValue(inputModel4.getFragment_input1());
-
-        Cell secondRow_cell6 = secondRow.createCell(5);
-        secondRow_cell6.setCellValue(inputModel5.getFragment_input1());
-
         Row secondRow_suggest = sheet.createRow(2);
         secondRow_suggest.setHeightInPoints(100);
         Cell secondRow_suggest_cell1 = secondRow_suggest.createCell(0);
         secondRow_suggest_cell1.setCellValue("第一个意见");
-
-        Cell secondRow_suggest_cell2 = secondRow_suggest.createCell(1);
-        secondRow_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input1());
-
-        Cell secondRow_suggest_cell3 = secondRow_suggest.createCell(2);
-        secondRow_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input1());
-
-        Cell secondRow_suggest_cell4 = secondRow_suggest.createCell(3);
-        secondRow_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input1());
-
-        Cell secondRow_suggest_cell5 = secondRow_suggest.createCell(4);
-        secondRow_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input1());
-
-        Cell secondRow_suggest_cell6 = secondRow_suggest.createCell(5);
-        secondRow_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input1());
 
         //第3行
 
@@ -199,84 +166,20 @@ public class ExcelUtils {
         Cell row3_cell1 = row3.createCell(0);
         row3_cell1.setCellValue("第二个输入框分数");
 
-        Cell row3_cell2 = row3.createCell(1);
-        row3_cell2.setCellValue(inputModel1.getFragment_input2());
-
-        Cell row3_cell3 = row3.createCell(2);
-        row3_cell3.setCellValue(inputModel2.getFragment_input2());
-
-        Cell row3_cell4 = row3.createCell(3);
-        row3_cell4.setCellValue(inputModel3.getFragment_input2());
-
-        Cell row3_cell5 = row3.createCell(4);
-        row3_cell5.setCellValue(inputModel4.getFragment_input2());
-
-        Cell row3_cell6 = row3.createCell(5);
-        row3_cell6.setCellValue(inputModel5.getFragment_input2());
-
         Row row3_suggest = sheet.createRow(4);
         row3_suggest.setHeightInPoints(100);
         Cell row3_suggest_cell1 = row3_suggest.createCell(0);
         row3_suggest_cell1.setCellValue("第二个意见");
-
-        Cell row3_suggest_cell2 = row3_suggest.createCell(1);
-        row3_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input2());
-
-        Cell row3_suggest_cell3 = row3_suggest.createCell(2);
-        row3_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input2());
-
-        Cell row3_suggest_cell4 = row3_suggest.createCell(3);
-        row3_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input2());
-
-        Cell row3_suggest_cell5 = row3_suggest.createCell(4);
-        row3_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input2());
-
-        Cell row3_suggest_cell6 = row3_suggest.createCell(5);
-        row3_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input2());
-
-        //第4行
 
         Row row4 = sheet.createRow(5);
         row4.setHeightInPoints(40);
         Cell row4_cell1 = row4.createCell(0);
         row4_cell1.setCellValue("第三个输入框分数");
 
-        Cell row4_cell2 = row4.createCell(1);
-        row4_cell2.setCellValue(inputModel1.getFragment_input3());
-
-        Cell row4_cell3 = row4.createCell(2);
-        row4_cell3.setCellValue(inputModel2.getFragment_input3());
-
-        Cell row4_cell4 = row3.createCell(3);
-        row4_cell4.setCellValue(inputModel3.getFragment_input3());
-
-        Cell row4_cell5 = row3.createCell(4);
-        row4_cell5.setCellValue(inputModel4.getFragment_input3());
-
-        Cell row4_cell6 = row3.createCell(5);
-        row4_cell6.setCellValue(inputModel5.getFragment_input3());
-
         Row row4_suggest = sheet.createRow(6);
         row4_suggest.setHeightInPoints(100);
         Cell row4_suggest_cell1 = row4_suggest.createCell(0);
         row4_suggest_cell1.setCellValue("第三个意见");
-
-        Cell row4_suggest_cell2 = row4_suggest.createCell(1);
-        row4_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input3());
-
-        Cell row4_suggest_cell3 = row4_suggest.createCell(2);
-        row4_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input3());
-
-        Cell row4_suggest_cell4 = row4_suggest.createCell(3);
-        row4_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input3());
-
-        Cell row4_suggest_cell5 = row4_suggest.createCell(4);
-        row4_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input3());
-
-        Cell row4_suggest_cell6 = row4_suggest.createCell(5);
-        row4_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input3());
-
-        //第5行
 
         Row row5 = sheet.createRow(7);
         row5.setHeightInPoints(40);
@@ -284,40 +187,10 @@ public class ExcelUtils {
         Cell row5_cell1 = row5.createCell(0);
         row5_cell1.setCellValue("第四个输入框分数");
 
-        Cell row5_cell2 = row5.createCell(1);
-        row5_cell2.setCellValue(inputModel1.getFragment_input4());
-
-        Cell row5_cell3 = row5.createCell(2);
-        row5_cell3.setCellValue(inputModel2.getFragment_input4());
-
-        Cell row5_cell4 = row5.createCell(3);
-        row5_cell4.setCellValue(inputModel3.getFragment_input4());
-
-        Cell row5_cell5 = row5.createCell(4);
-        row5_cell5.setCellValue(inputModel4.getFragment_input4());
-
-        Cell row5_cell6 = row5.createCell(5);
-        row5_cell6.setCellValue(inputModel5.getFragment_input4());
-
         Row row5_suggest = sheet.createRow(8);
         row5_suggest.setHeightInPoints(100);
         Cell row5_suggest_cell1 = row5_suggest.createCell(0);
         row5_suggest_cell1.setCellValue("第四个意见");
-
-        Cell row5_suggest_cell2 = row5_suggest.createCell(1);
-        row5_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input4());
-
-        Cell row5_suggest_cell3 = row5_suggest.createCell(2);
-        row5_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input4());
-
-        Cell row5_suggest_cell4 = row5_suggest.createCell(3);
-        row5_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input4());
-
-        Cell row5_suggest_cell5 = row5_suggest.createCell(4);
-        row5_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input4());
-
-        Cell row5_suggest_cell6 = row5_suggest.createCell(5);
-        row5_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input4());
 
 
         //第6行
@@ -328,41 +201,10 @@ public class ExcelUtils {
         Cell row6_cell1 = row6.createCell(0);
         row6_cell1.setCellValue("第五个输入框分数");
 
-        Cell row6_cell2 = row6.createCell(1);
-        row6_cell2.setCellValue(inputModel1.getFragment_input5());
-
-        Cell row6_cell3 = row6.createCell(2);
-        row6_cell3.setCellValue(inputModel2.getFragment_input5());
-
-        Cell row6_cell4 = row6.createCell(3);
-        row6_cell4.setCellValue(inputModel3.getFragment_input5());
-
-        Cell row6_cell5 = row6.createCell(4);
-        row6_cell5.setCellValue(inputModel4.getFragment_input5());
-
-        Cell row6_cell6 = row6.createCell(5);
-        row6_cell6.setCellValue(inputModel5.getFragment_input5());
-
         Row row6_suggest = sheet.createRow(10);
         row6_suggest.setHeightInPoints(100);
         Cell row6_suggest_cell1 = row6_suggest.createCell(0);
         row6_suggest_cell1.setCellValue("第五个意见");
-
-        Cell row6_suggest_cell2 = row6_suggest.createCell(1);
-        row6_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input5());
-
-        Cell row6_suggest_cell3 = row6_suggest.createCell(2);
-        row6_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input5());
-
-        Cell row6_suggest_cell4 = row6_suggest.createCell(3);
-        row6_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input5());
-
-        Cell row6_suggest_cell5 = row6_suggest.createCell(4);
-        row6_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input5());
-
-        Cell row6_suggest_cell6 = row6_suggest.createCell(5);
-        row6_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input5());
-
 
         //第7行
 
@@ -372,42 +214,11 @@ public class ExcelUtils {
         Cell row7_cell1 = row7.createCell(0);
         row7_cell1.setCellValue("第六个输入框分数");
 
-        Cell row7_cell2 = row7.createCell(1);
-        row7_cell2.setCellValue(inputModel1.getFragment_input6());
-
-        Cell row7_cell3 = row7.createCell(2);
-        row7_cell3.setCellValue(inputModel2.getFragment_input6());
-
-        Cell row7_cell4 = row7.createCell(3);
-        row7_cell4.setCellValue(inputModel3.getFragment_input6());
-
-        Cell row7_cell5 = row7.createCell(4);
-        row7_cell5.setCellValue(inputModel4.getFragment_input6());
-
-        Cell row7_cell6 = row7.createCell(5);
-        row7_cell6.setCellValue(inputModel5.getFragment_input6());
 
         Row row7_suggest = sheet.createRow(12);
         row7_suggest.setHeightInPoints(100);
         Cell row7_suggest_cell1 = row7_suggest.createCell(0);
         row7_suggest_cell1.setCellValue("第六个意见");
-
-        Cell row7_suggest_cell2 = row7_suggest.createCell(1);
-        row7_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input6());
-
-        Cell row7_suggest_cell3 = row7_suggest.createCell(2);
-        row7_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input6());
-
-        Cell row7_suggest_cell4 = row7_suggest.createCell(3);
-        row7_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input6());
-
-        Cell row7_suggest_cell5 = row7_suggest.createCell(4);
-        row7_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input6());
-
-        Cell row7_suggest_cell6 = row7_suggest.createCell(5);
-        row7_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input6());
-
-        //第8行
 
         Row row8 = sheet.createRow(13);
         row8.setHeightInPoints(40);
@@ -415,42 +226,10 @@ public class ExcelUtils {
         Cell row8_cell1 = row8.createCell(0);
         row8_cell1.setCellValue("第七个分数");
 
-        Cell row8_cell2 = row8.createCell(1);
-        row8_cell2.setCellValue(inputModel1.getFragment_input7());
-
-        Cell row8_cell3 = row8.createCell(2);
-        row8_cell3.setCellValue(inputModel2.getFragment_input7());
-
-        Cell row8_cell4 = row8.createCell(3);
-        row8_cell4.setCellValue(inputModel3.getFragment_input7());
-
-        Cell row8_cell5 = row8.createCell(4);
-        row8_cell5.setCellValue(inputModel4.getFragment_input7());
-
-        Cell row8_cell6 = row8.createCell(5);
-        row8_cell6.setCellValue(inputModel5.getFragment_input7());
-
         Row row8_suggest = sheet.createRow(14);
         row8_suggest.setHeightInPoints(100);
         Cell row8_suggest_cell1 = row8_suggest.createCell(0);
         row8_suggest_cell1.setCellValue("第七个意见");
-
-        Cell row8_suggest_cell2 = row8_suggest.createCell(1);
-        row8_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input7());
-
-        Cell row8_suggest_cell3 = row8_suggest.createCell(2);
-        row8_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input7());
-
-        Cell row8_suggest_cell4 = row8_suggest.createCell(3);
-        row8_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input7());
-
-        Cell row8_suggest_cell5 = row8_suggest.createCell(4);
-        row8_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input7());
-
-        Cell row8_suggest_cell6 = row8_suggest.createCell(5);
-        row8_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input7());
-
-        //第9行
 
         Row row9 = sheet.createRow(15);
         row9.setHeightInPoints(40);
@@ -458,41 +237,11 @@ public class ExcelUtils {
         Cell row9_cell1 = row9.createCell(0);
         row9_cell1.setCellValue("第八个分数");
 
-        Cell row9_cell2 = row9.createCell(1);
-        row9_cell2.setCellValue(inputModel1.getFragment_input8());
-
-        Cell row9_cell3 = row9.createCell(2);
-        row9_cell3.setCellValue(inputModel2.getFragment_input8());
-
-        Cell row9_cell4 = row9.createCell(3);
-        row9_cell4.setCellValue(inputModel3.getFragment_input8());
-
-        Cell row9_cell5 = row9.createCell(4);
-        row9_cell5.setCellValue(inputModel4.getFragment_input8());
-
-        Cell row9_cell6 = row9.createCell(5);
-        row9_cell6.setCellValue(inputModel5.getFragment_input8());
-
-
         Row row9_suggest = sheet.createRow(16);
         row9_suggest.setHeightInPoints(100);
         Cell row9_suggest_cell1 = row9_suggest.createCell(0);
         row9_suggest_cell1.setCellValue("第八个意见");
 
-        Cell row9_suggest_cell2 = row9_suggest.createCell(1);
-        row9_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input8());
-
-        Cell row9_suggest_cell3 = row9_suggest.createCell(2);
-        row9_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input8());
-
-        Cell row9_suggest_cell4 = row9_suggest.createCell(3);
-        row9_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input8());
-
-        Cell row9_suggest_cell5 = row9_suggest.createCell(4);
-        row9_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input8());
-
-        Cell row9_suggest_cell6 = row9_suggest.createCell(5);
-        row9_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input8());
 
         //第10行
 
@@ -502,40 +251,11 @@ public class ExcelUtils {
         Cell row10_cell1 = row10.createCell(0);
         row10_cell1.setCellValue("第九个分数");
 
-        Cell row10_cell2 = row10.createCell(1);
-        row10_cell2.setCellValue(inputModel1.getFragment_input9());
-
-        Cell row10_cell3 = row10.createCell(2);
-        row10_cell3.setCellValue(inputModel2.getFragment_input9());
-
-//        Cell row10_cell4=row3.createCell(3);
-//        row10_cell4.setCellValue(inputModel3.getFragment_input9());
-
-        Cell row10_cell5 = row10.createCell(4);
-        row10_cell5.setCellValue(inputModel4.getFragment_input9());
-
-        Cell row10_cell6 = row10.createCell(5);
-        row10_cell6.setCellValue(inputModel5.getFragment_input9());
 
         Row row10_suggest = sheet.createRow(18);
         row10_suggest.setHeightInPoints(100);
         Cell row10_suggest_cell1 = row10_suggest.createCell(0);
         row10_suggest_cell1.setCellValue("第九个意见");
-
-        Cell row10_suggest_cell2 = row10_suggest.createCell(1);
-        row10_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input9());
-
-        Cell row10_suggest_cell3 = row10_suggest.createCell(2);
-        row10_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input9());
-
-
-        Cell row10_suggest_cell5 = row10_suggest.createCell(4);
-        row10_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input9());
-
-        Cell row10_suggest_cell6 = row10_suggest.createCell(5);
-        row10_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input9());
-
-        //第11行
 
         Row row11 = sheet.createRow(19);
         row11.setHeightInPoints(40);
@@ -543,40 +263,10 @@ public class ExcelUtils {
         Cell row11_cell1 = row11.createCell(0);
         row11_cell1.setCellValue("第十个分数");
 
-        Cell row11_cell2 = row11.createCell(1);
-        row11_cell2.setCellValue(inputModel1.getFragment_input10());
-
-        Cell row11_cell3 = row11.createCell(2);
-        row11_cell3.setCellValue(inputModel2.getFragment_input10());
-
-//        Cell row11_cell4=row11.createCell(3);
-//        row11_cell4.setCellValue(inputModel3.getFragment_input10());
-
-        Cell row11_cell5 = row11.createCell(4);
-        row11_cell5.setCellValue(inputModel4.getFragment_input10());
-
-        Cell row11_cell6 = row11.createCell(5);
-        row11_cell6.setCellValue(inputModel5.getFragment_input10());
-
         Row row11_suggest = sheet.createRow(20);
         row11_suggest.setHeightInPoints(100);
         Cell row11_suggest_cell1 = row11_suggest.createCell(0);
         row11_suggest_cell1.setCellValue("第十个意见");
-
-        Cell row11_suggest_cell2 = row11_suggest.createCell(1);
-        row11_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input10());
-
-        Cell row11_suggest_cell3 = row11_suggest.createCell(2);
-        row11_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input10());
-
-
-        Cell row11_suggest_cell5 = row11_suggest.createCell(4);
-        row11_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input10());
-
-        Cell row11_suggest_cell6 = row11_suggest.createCell(5);
-        row11_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input10());
-
-        //第12行
 
         Row row12 = sheet.createRow(21);
         row12.setHeightInPoints(40);
@@ -584,38 +274,11 @@ public class ExcelUtils {
         Cell row12_cell1 = row12.createCell(0);
         row12_cell1.setCellValue("第十一个分数");
 
-        Cell row12_cell2 = row12.createCell(1);
-        row12_cell2.setCellValue(inputModel1.getFragment_input11());
-
-        Cell row12_cell3 = row12.createCell(2);
-        row12_cell3.setCellValue(inputModel2.getFragment_input11());
-
-//        Cell row12_cell4=row12.createCell(3);
-//        row12_cell4.setCellValue(inputModel3.getFragment_input11());
-//
-//        Cell row12_cell5=row12.createCell(4);
-//        row12_cell5.setCellValue(inputModel4.getFragment_input11());
-
-        Cell row12_cell6 = row12.createCell(5);
-        row12_cell6.setCellValue(inputModel5.getFragment_input11());
 
         Row row12_suggest = sheet.createRow(22);
         row12_suggest.setHeightInPoints(100);
         Cell row12_suggest_cell1 = row12_suggest.createCell(0);
         row12_suggest_cell1.setCellValue("第十一个意见");
-
-        Cell row12_suggest_cell2 = row12_suggest.createCell(1);
-        row12_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input11());
-
-        Cell row12_suggest_cell3 = row12_suggest.createCell(2);
-        row12_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input11());
-
-
-        Cell row12_suggest_cell6 = row12_suggest.createCell(5);
-        row12_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input11());
-
-
-        //第13行
 
         Row row13 = sheet.createRow(23);
         row13.setHeightInPoints(40);
@@ -623,29 +286,10 @@ public class ExcelUtils {
         Cell row13_cell1 = row13.createCell(0);
         row13_cell1.setCellValue("第十二个分数");
 
-//        Cell row13_cell2=row13.createCell(1);
-//        row13_cell2.setCellValue(inputModel1.getFragment_input12());
-
-        Cell row13_cell3 = row13.createCell(2);
-        row13_cell3.setCellValue(inputModel2.getFragment_input12());
-
-//        Cell row12_cell4=row13.createCell(3);
-//        row12_cell4.setCellValue(inputModel3.getFragment_input11());
-//
-//        Cell row12_cell5=row13.createCell(4);
-//        row12_cell5.setCellValue(inputModel4.getFragment_input11());
-
-//        Cell row13_cell6=row13.createCell(5);
-//        row13_cell6.setCellValue(inputModel5.getFragment_input12());
-
-
         Row row13_suggest = sheet.createRow(24);
         row13_suggest.setHeightInPoints(100);
         Cell row13_suggest_cell1 = row13_suggest.createCell(0);
         row13_suggest_cell1.setCellValue("第十二个意见");
-
-        Cell row13_suggest_cell3 = row13_suggest.createCell(2);
-        row13_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input12());
 
 
         Row row14_suggest = sheet.createRow(27);
@@ -653,47 +297,381 @@ public class ExcelUtils {
         Cell row14_suggest_cell1 = row14_suggest.createCell(0);
         row14_suggest_cell1.setCellValue("总意见");
 
-        Cell row14_suggest_cell2 = row14_suggest.createCell(1);
-        row14_suggest_cell2.setCellValue(inputModel1.getSuggest_input());
-
-        Cell row14_suggest_cell3 = row14_suggest.createCell(2);
-        row14_suggest_cell3.setCellValue(inputModel2.getSuggest_input());
-
-        Cell row14_suggest_cell4 = row14_suggest.createCell(3);
-        row14_suggest_cell4.setCellValue(inputModel3.getSuggest_input());
-
-        Cell row14_suggest_cell5 = row14_suggest.createCell(4);
-        row14_suggest_cell5.setCellValue(inputModel4.getSuggest_input());
-
-        Cell row14_suggest_cell6 = row14_suggest.createCell(5);
-        row14_suggest_cell6.setCellValue(inputModel5.getSuggest_input());
-
 
         Row row15_suggest = sheet.createRow(26);
         row15_suggest.setHeightInPoints(200);
         Cell row15_suggest_cell1 = row15_suggest.createCell(0);
         row15_suggest_cell1.setCellValue("总问题");
 
-        Cell row15_suggest_cell2 = row15_suggest.createCell(1);
-        row15_suggest_cell2.setCellValue(inputModel1.getProblem_input());
 
-        Cell row15_suggest_cell3 = row15_suggest.createCell(2);
-        row15_suggest_cell3.setCellValue(inputModel2.getProblem_input());
 
-        Cell row15_suggest_cell4 = row15_suggest.createCell(3);
-        row15_suggest_cell4.setCellValue(inputModel3.getProblem_input());
+        if(inputModel1!=null){
+            Cell secondRow_cell2 = secondRow.createCell(1);
+            secondRow_cell2.setCellValue(inputModel1.getFragment_input1());
 
-        Cell row15_suggest_cell5 = row15_suggest.createCell(4);
-        row15_suggest_cell5.setCellValue(inputModel4.getProblem_input());
+            Cell secondRow_suggest_cell2 = secondRow_suggest.createCell(1);
+            secondRow_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input1());
 
-        Cell row15_suggest_cell6 = row15_suggest.createCell(5);
-        row15_suggest_cell6.setCellValue(inputModel5.getProblem_input());
+            Cell row3_cell2 = row3.createCell(1);
+            row3_cell2.setCellValue(inputModel1.getFragment_input2());
 
+            Cell row3_suggest_cell2 = row3_suggest.createCell(1);
+            row3_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input2());
+
+            Cell row4_cell2 = row4.createCell(1);
+            row4_cell2.setCellValue(inputModel1.getFragment_input3());
+
+            Cell row4_suggest_cell2 = row4_suggest.createCell(1);
+            row4_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input3());
+
+            Cell row5_cell2 = row5.createCell(1);
+            row5_cell2.setCellValue(inputModel1.getFragment_input4());
+
+            Cell row5_suggest_cell2 = row5_suggest.createCell(1);
+            row5_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input4());
+
+            Cell row6_cell2 = row6.createCell(1);
+            row6_cell2.setCellValue(inputModel1.getFragment_input5());
+
+            Cell row6_suggest_cell2 = row6_suggest.createCell(1);
+            row6_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input5());
+
+            Cell row7_cell2 = row7.createCell(1);
+            row7_cell2.setCellValue(inputModel1.getFragment_input6());
+
+            Cell row7_suggest_cell2 = row7_suggest.createCell(1);
+            row7_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input6());
+
+            Cell row8_cell2 = row8.createCell(1);
+            row8_cell2.setCellValue(inputModel1.getFragment_input7());
+
+            Cell row8_suggest_cell2 = row8_suggest.createCell(1);
+            row8_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input7());
+
+            Cell row9_cell2 = row9.createCell(1);
+            row9_cell2.setCellValue(inputModel1.getFragment_input8());
+
+            Cell row9_suggest_cell2 = row9_suggest.createCell(1);
+            row9_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input8());
+
+            Cell row10_cell2 = row10.createCell(1);
+            row10_cell2.setCellValue(inputModel1.getFragment_input9());
+
+            Cell row10_suggest_cell2 = row10_suggest.createCell(1);
+            row10_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input9());
+
+            Cell row11_cell2 = row11.createCell(1);
+            row11_cell2.setCellValue(inputModel1.getFragment_input10());
+
+            Cell row11_suggest_cell2 = row11_suggest.createCell(1);
+            row11_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input10());
+
+            Cell row12_cell2 = row12.createCell(1);
+            row12_cell2.setCellValue(inputModel1.getFragment_input11());
+
+            Cell row12_suggest_cell2 = row12_suggest.createCell(1);
+            row12_suggest_cell2.setCellValue(inputModel1.getSuggest_fragment_input11());
+
+            Cell row14_suggest_cell2 = row14_suggest.createCell(1);
+            row14_suggest_cell2.setCellValue(inputModel1.getSuggest_input());
+
+            Cell row15_suggest_cell2 = row15_suggest.createCell(1);
+            row15_suggest_cell2.setCellValue(inputModel1.getProblem_input());
+
+
+
+
+        }
+
+        if (inputModel2!=null){
+            Cell secondRow_cell3 = secondRow.createCell(2);
+            secondRow_cell3.setCellValue(inputModel2.getFragment_input1());
+
+            Cell secondRow_suggest_cell3 = secondRow_suggest.createCell(2);
+            secondRow_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input1());
+
+            Cell row3_cell3 = row3.createCell(2);
+            row3_cell3.setCellValue(inputModel2.getFragment_input2());
+            Cell row3_suggest_cell3 = row3_suggest.createCell(2);
+            row3_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input2());
+
+            Cell row4_cell3 = row4.createCell(2);
+            row4_cell3.setCellValue(inputModel2.getFragment_input3());
+
+            Cell row4_suggest_cell3 = row4_suggest.createCell(2);
+            row4_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input3());
+
+            Cell row5_cell3 = row5.createCell(2);
+            row5_cell3.setCellValue(inputModel2.getFragment_input4());
+
+            Cell row5_suggest_cell3 = row5_suggest.createCell(2);
+            row5_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input4());
+
+            Cell row6_cell3 = row6.createCell(2);
+            row6_cell3.setCellValue(inputModel2.getFragment_input5());
+
+            Cell row6_suggest_cell3 = row6_suggest.createCell(2);
+            row6_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input5());
+
+            Cell row7_cell3 = row7.createCell(2);
+            row7_cell3.setCellValue(inputModel2.getFragment_input6());
+
+            Cell row7_suggest_cell3 = row7_suggest.createCell(2);
+            row7_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input6());
+
+            Cell row8_cell3 = row8.createCell(2);
+            row8_cell3.setCellValue(inputModel2.getFragment_input7());
+
+            Cell row8_suggest_cell3 = row8_suggest.createCell(2);
+            row8_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input7());
+
+
+
+
+            Cell row9_cell3 = row9.createCell(2);
+            row9_cell3.setCellValue(inputModel2.getFragment_input8());
+
+            Cell row9_suggest_cell3 = row9_suggest.createCell(2);
+            row9_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input8());
+
+            Cell row10_cell3 = row10.createCell(2);
+            row10_cell3.setCellValue(inputModel2.getFragment_input9());
+
+            Cell row10_suggest_cell3 = row10_suggest.createCell(2);
+            row10_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input9());
+
+            Cell row11_cell3 = row11.createCell(2);
+            row11_cell3.setCellValue(inputModel2.getFragment_input10());
+
+            Cell row11_suggest_cell3 = row11_suggest.createCell(2);
+            row11_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input10());
+
+            Cell row12_cell3 = row12.createCell(2);
+            row12_cell3.setCellValue(inputModel2.getFragment_input11());
+
+            Cell row12_suggest_cell3 = row12_suggest.createCell(2);
+            row12_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input11());
+
+
+            Cell row13_cell3 = row13.createCell(2);
+            row13_cell3.setCellValue(inputModel2.getFragment_input12());
+
+            Cell row13_suggest_cell3 = row13_suggest.createCell(2);
+            row13_suggest_cell3.setCellValue(inputModel2.getSuggest_fragment_input12());
+
+            Cell row14_suggest_cell3 = row14_suggest.createCell(2);
+            row14_suggest_cell3.setCellValue(inputModel2.getSuggest_input());
+
+            Cell row15_suggest_cell3 = row15_suggest.createCell(2);
+            row15_suggest_cell3.setCellValue(inputModel2.getProblem_input());
+        }
+
+        if(inputModel3!=null){
+            Cell secondRow_cell4 = secondRow.createCell(3);
+            secondRow_cell4.setCellValue(inputModel3.getFragment_input1());
+            Cell secondRow_suggest_cell4 = secondRow_suggest.createCell(3);
+            secondRow_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input1());
+
+            Cell row3_cell4 = row3.createCell(3);
+            row3_cell4.setCellValue(inputModel3.getFragment_input2());
+            Cell row3_suggest_cell4 = row3_suggest.createCell(3);
+            row3_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input2());
+
+            Cell row4_cell4 = row3.createCell(3);
+            row4_cell4.setCellValue(inputModel3.getFragment_input3());
+
+
+            Cell row4_suggest_cell4 = row4_suggest.createCell(3);
+            row4_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input3());
+
+            Cell row5_cell4 = row5.createCell(3);
+            row5_cell4.setCellValue(inputModel3.getFragment_input4());
+
+            Cell row5_suggest_cell4 = row5_suggest.createCell(3);
+            row5_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input4());
+
+            Cell row6_cell4 = row6.createCell(3);
+            row6_cell4.setCellValue(inputModel3.getFragment_input5());
+
+            Cell row6_suggest_cell4 = row6_suggest.createCell(3);
+            row6_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input5());
+
+            Cell row7_cell4 = row7.createCell(3);
+            row7_cell4.setCellValue(inputModel3.getFragment_input6());
+
+
+            Cell row7_suggest_cell4 = row7_suggest.createCell(3);
+            row7_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input6());
+
+
+            Cell row8_cell4 = row8.createCell(3);
+            row8_cell4.setCellValue(inputModel3.getFragment_input7());
+
+            Cell row8_suggest_cell4 = row8_suggest.createCell(3);
+            row8_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input7());
+            Cell row9_cell4 = row9.createCell(3);
+            row9_cell4.setCellValue(inputModel3.getFragment_input8());
+
+            Cell row9_suggest_cell4 = row9_suggest.createCell(3);
+            row9_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input8());
+
+
+            Cell row14_suggest_cell4 = row14_suggest.createCell(3);
+            row14_suggest_cell4.setCellValue(inputModel3.getSuggest_input());
+
+            Cell row15_suggest_cell4 = row15_suggest.createCell(3);
+            row15_suggest_cell4.setCellValue(inputModel3.getProblem_input());
+
+        }
+
+        if(inputModel4!=null){
+            Cell secondRow_cell5 = secondRow.createCell(4);
+            secondRow_cell5.setCellValue(inputModel4.getFragment_input1());
+            Cell secondRow_suggest_cell5 = secondRow_suggest.createCell(4);
+            secondRow_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input1());
+
+            Cell row3_cell5 = row3.createCell(4);
+            row3_cell5.setCellValue(inputModel4.getFragment_input2());
+            Cell row3_suggest_cell5 = row3_suggest.createCell(4);
+            row3_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input2());
+
+
+            Cell row4_cell5 = row3.createCell(4);
+            row4_cell5.setCellValue(inputModel4.getFragment_input3());
+
+            Cell row4_suggest_cell5 = row4_suggest.createCell(4);
+            row4_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input3());
+
+            Cell row5_cell5 = row5.createCell(4);
+            row5_cell5.setCellValue(inputModel4.getFragment_input4());
+
+            Cell row5_suggest_cell5 = row5_suggest.createCell(4);
+            row5_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input4());
+
+
+            Cell row6_cell5 = row6.createCell(4);
+            row6_cell5.setCellValue(inputModel4.getFragment_input5());
+
+            Cell row6_suggest_cell5 = row6_suggest.createCell(4);
+            row6_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input5());
+
+
+            Cell row7_cell5 = row7.createCell(4);
+            row7_cell5.setCellValue(inputModel4.getFragment_input6());
+
+            Cell row7_suggest_cell5 = row7_suggest.createCell(4);
+            row7_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input6());
+
+            Cell row8_cell5 = row8.createCell(4);
+            row8_cell5.setCellValue(inputModel4.getFragment_input7());
+
+            Cell row8_suggest_cell5 = row8_suggest.createCell(4);
+            row8_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input7());
+
+            Cell row9_cell5 = row9.createCell(4);
+            row9_cell5.setCellValue(inputModel4.getFragment_input8());
+
+            Cell row9_suggest_cell5 = row9_suggest.createCell(4);
+            row9_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input8());
+            Cell row10_cell5 = row10.createCell(4);
+            row10_cell5.setCellValue(inputModel4.getFragment_input9());
+            Cell row10_suggest_cell5 = row10_suggest.createCell(4);
+            row10_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input9());
+            Cell row11_cell5 = row11.createCell(4);
+            row11_cell5.setCellValue(inputModel4.getFragment_input10());
+            Cell row11_suggest_cell5 = row11_suggest.createCell(4);
+            row11_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input10());
+
+
+            Cell row14_suggest_cell5 = row14_suggest.createCell(4);
+            row14_suggest_cell5.setCellValue(inputModel4.getSuggest_input());
+
+
+            Cell row15_suggest_cell5 = row15_suggest.createCell(4);
+            row15_suggest_cell5.setCellValue(inputModel4.getProblem_input());
+
+        }
+
+        if(inputModel5!=null){
+            Cell secondRow_cell6 = secondRow.createCell(5);
+            secondRow_cell6.setCellValue(inputModel5.getFragment_input1());
+            Cell secondRow_suggest_cell6 = secondRow_suggest.createCell(5);
+            secondRow_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input1());
+
+            Cell row3_cell5 = row3.createCell(5);
+            row3_cell5.setCellValue(inputModel5.getFragment_input2());
+            Cell row3_suggest_cell6 = row3_suggest.createCell(5);
+            row3_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input2());
+
+            Cell row4_cell6 = row3.createCell(5);
+            row4_cell6.setCellValue(inputModel5.getFragment_input3());
+
+            Cell row3_cell6 = row3.createCell(5);
+            row3_cell6.setCellValue(inputModel5.getFragment_input2());
+
+            Cell row4_suggest_cell6 = row4_suggest.createCell(5);
+            row4_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input3());
+
+            Cell row5_cell6 = row5.createCell(5);
+            row5_cell6.setCellValue(inputModel5.getFragment_input4());
+            Cell row5_suggest_cell6 = row5_suggest.createCell(5);
+            row5_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input4());
+
+            Cell row6_cell6 = row6.createCell(5);
+            row6_cell6.setCellValue(inputModel5.getFragment_input5());
+
+            Cell row6_suggest_cell6 = row6_suggest.createCell(5);
+            row6_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input5());
+
+            Cell row7_cell6 = row7.createCell(5);
+            row7_cell6.setCellValue(inputModel5.getFragment_input6());
+
+            Cell row7_suggest_cell6 = row7_suggest.createCell(5);
+            row7_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input6());
+
+            Cell row8_cell6 = row8.createCell(5);
+            row8_cell6.setCellValue(inputModel5.getFragment_input7());
+
+            Cell row8_suggest_cell6 = row8_suggest.createCell(5);
+            row8_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input7());
+
+            Cell row9_cell6 = row9.createCell(5);
+            row9_cell6.setCellValue(inputModel5.getFragment_input8());
+
+            Cell row9_suggest_cell6 = row9_suggest.createCell(5);
+            row9_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input8());
+
+            Cell row10_cell6 = row10.createCell(5);
+            row10_cell6.setCellValue(inputModel5.getFragment_input9());
+
+            Cell row10_suggest_cell6 = row10_suggest.createCell(5);
+            row10_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input9());
+
+            Cell row11_cell6 = row11.createCell(5);
+            row11_cell6.setCellValue(inputModel5.getFragment_input10());
+            Cell row11_suggest_cell6 = row11_suggest.createCell(5);
+            row11_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input10());
+
+            Cell row12_cell6 = row12.createCell(5);
+            row12_cell6.setCellValue(inputModel5.getFragment_input11());
+
+            Cell row12_suggest_cell6 = row12_suggest.createCell(5);
+            row12_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input11());
+
+
+            Cell row14_suggest_cell6 = row14_suggest.createCell(5);
+            row14_suggest_cell6.setCellValue(inputModel5.getSuggest_input());
+
+            Cell row15_suggest_cell6 = row15_suggest.createCell(5);
+            row15_suggest_cell6.setCellValue(inputModel5.getProblem_input());
+
+        }
 
         Row name1 = sheet.createRow(29);
         Cell name_cell = name1.createCell(0);
         name_cell.setCellValue("测评员:" + UserManager.getUser(context).getUsername());
         mergingCells(sheet, CellRangeAddress.valueOf("$A$1:$F$1"));
+
 
         File file = new File(path);
         if (!file.exists()) {

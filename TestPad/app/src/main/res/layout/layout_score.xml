@@ -151,11 +151,26 @@
                     android:textColor="@android:color/white"
                     android:textSize="17sp" />
 
+                <Button
+                    android:id="@+id/main_score_save_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/main_score_btn"
+                    android:background="@drawable/ic_score_btn"
+                    android:onClick="saveFile"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="生成数据"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
                 <LinearLayout
                     android:id="@+id/main_socre_back"
                     android:onClick="back"
                     android:layout_margin="10dp"
-                    android:layout_toLeftOf="@id/main_score_btn"
+                    android:layout_toLeftOf="@id/main_score_save_btn"
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -184,6 +199,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:onClick="buildCode"
                     android:layout_margin="10dp"
                     android:layout_toLeftOf="@id/main_socre_back"

@@ -32,8 +32,7 @@ import java.util.Date;
 public class BaseFragment extends Fragment{
 
     private AlertDialog alertDialog;
-    private AlertDialog name_dialog;
-    private OnSaveFileInterface onSaveFileInterface;
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -41,9 +40,7 @@ public class BaseFragment extends Fragment{
 
     }
 
-    public void setOnFileSaveInterface(OnSaveFileInterface onSaveFileInterface){
-        this.onSaveFileInterface = onSaveFileInterface;
-    }
+
 
     public void showLoadingDialog() {
         if (alertDialog!=null){
@@ -78,75 +75,8 @@ public class BaseFragment extends Fragment{
         if ( alertDialog!=null && alertDialog.isShowing() ){
             alertDialog.dismiss();
         }
-        if ( name_dialog!=null && name_dialog.isShowing() ){
-            name_dialog.dismiss();
-        }
-    }
-
-    public void showNameDialog(final ScoreModel scoreModel){
-        if (name_dialog!=null){
-            name_dialog.show();
-            return;
-        }
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.layout_dialog,null);
-        final EditText editText = view.findViewById(R.id.dialog_name_edit);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        editText.setText( simpleDateFormat.format(new Date()));
-        Button button = view.findViewById(R.id.dialog_choose);
-        final TextView textView = view.findViewById(R.id.dialog_path);
-        textView.setText(MyUtils.getCacheFile(getContext(), ExcelUtils.DIR_FILE_NAME).getAbsolutePath());
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FileChooser fileChooser = new FileChooser(getActivity(), new FileChooser.FileChoosenListener() {
-                    @Override
-                    public void onFileChoosen(String filePath) {
-                        textView.setText(filePath);
-                    }
-                });
-
-                fileChooser.setBackIconRes(R.drawable.ic_back_png);
-                fileChooser.setTitle("选择文件路径");
-                fileChooser.setDoneText("确定");
-                fileChooser.setThemeColor(R.color.colorAccent);
-
-                fileChooser.setChooseType(FileInfo.FILE_TYPE_FOLDER);
-                fileChooser.showFile(false);  //是否显示文件
-                fileChooser.open();
-            }
-        });
-        name_dialog = new AlertDialog.Builder(getActivity()).setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //确定
-                if(TextUtils.isEmpty(editText.getText().toString())){
-                    Toast.makeText(getActivity(),"文件名不能为空",Toast.LENGTH_SHORT).show();
-                    showNameDialog(scoreModel);
-                    return;
-                }
-                if(onSaveFileInterface!=null){
-                    onSaveFileInterface.onConfirm(scoreModel,textView.getText().toString(),editText.getText().toString());
-                }
-            }
-        }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //取消
-            }
-        }).setTitle("是否存为文件？").setView(view).create();
-        name_dialog.show();
-
 
     }
 
-    public void dismissNameDialog() {
-        if (null != name_dialog && name_dialog.isShowing()) {
-            name_dialog.dismiss();
-        }
-    }
-
-    public interface OnSaveFileInterface{
-         void onConfirm(ScoreModel scoreModel,String path,String name);
-    }
 
 }
