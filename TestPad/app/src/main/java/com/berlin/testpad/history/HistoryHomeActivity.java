@@ -2,6 +2,7 @@ package com.berlin.testpad.history;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -35,6 +36,7 @@ public class HistoryHomeActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private HistoryAdapter adapter;
     private List<HistoryModel>list = new ArrayList<>();
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +47,25 @@ public class HistoryHomeActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new ItemDivider(this,2));
+
+
+        swipeRefreshLayout = findViewById(R.id.history_swip);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                list.clear();
+                getList();
+
+            }
+        });
+
+//        swipeRefreshLayout.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                swipeRefreshLayout.setRefreshing(true);
+//            }
+//        });
+
         getList();
     }
 
@@ -60,6 +81,7 @@ public class HistoryHomeActivity extends BaseActivity {
                 List<ScoreModel>array = (List<ScoreModel>) t;
                 if(array==null||array.size()==0){
                     dismissLoadingDialog();
+                    swipeRefreshLayout.setRefreshing(false);
                     return;
                 }else{
                     for (int i= array.size()-1;i>=0;i-- ) {
@@ -113,6 +135,7 @@ public class HistoryHomeActivity extends BaseActivity {
                     }
                     adapter.notifyDataSetChanged();
                     dismissLoadingDialog();
+                    swipeRefreshLayout.setRefreshing(false);
                 }
 
             }

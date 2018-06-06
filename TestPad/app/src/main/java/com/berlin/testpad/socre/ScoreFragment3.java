@@ -87,7 +87,7 @@ public class ScoreFragment3 extends BaseFragment {
 
         showLoadingDialog();
         if (getArguments() != null) {
-            score_Model = (ScoreModel) getArguments().getSerializable("id");
+            score_Model = (ScoreModel) getArguments().getSerializable("item");
         }
         if (score_Model != null) {
             if (!TextUtils.isEmpty(score_Model.getFragment3())) {
@@ -102,7 +102,7 @@ public class ScoreFragment3 extends BaseFragment {
                 @Override
                 public <T> void onFinish(List<T> t) {
                     List<ScoreModel> list = (List<ScoreModel>) t;
-                    if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
+                    if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size()-1).isSave_success()) {
                         dismissLoadingDialog();
                     } else {
                         ScoreModel scoreModel = list.get(list.size() - 1);
@@ -308,7 +308,7 @@ public class ScoreFragment3 extends BaseFragment {
             @Override
             public <T> void onFinish(List<T> t) {
                 List<ScoreModel> list = (List<ScoreModel>) t;
-                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
+                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size() - 1).isSave_success()) {
                     ScoreModel scoreModel = new ScoreModel();
                     scoreModel.setUser_id(UserManager.getUser(getContext()).getId());
                     scoreModel.setFragment3(str);

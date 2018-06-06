@@ -19,6 +19,9 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -26,26 +29,30 @@
             android:text="路径:" />
 
         <TextView
+            android:layout_marginRight="10dp"
             android:id="@+id/dialog_path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:textSize="17sp" />
-
-        <Button
-            android:id="@+id/dialog_choose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@null"
-            android:gravity="right|center_vertical"
-            android:padding="10dp"
-            android:text="更改" />
+            android:gravity="center_vertical" />
 
     </LinearLayout>
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/dialog_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_gravity="right"
+        android:text="更改" />
+
 
 
 </LinearLayout>

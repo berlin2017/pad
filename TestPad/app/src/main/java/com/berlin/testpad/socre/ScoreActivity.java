@@ -70,9 +70,10 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                 id = R.id.main_radiobutton5;
                 break;
         }
-        radioGroup.check(id);
+
 
         if (getIntent().getExtras() != null) {
+            final int check_id = id;
             showLoadingDialog();
             int score_id = getIntent().getIntExtra("id", 0);
             DataSupport.findAsync(ScoreModel.class, score_id).listen(new FindCallback() {
@@ -80,8 +81,12 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                 public <T> void onFinish(T t) {
                     scoreModel = (ScoreModel) t;
                     dismissLoadingDialog();
+                    radioGroup.check(check_id);
                 }
             });
+
+        }else{
+            radioGroup.check(id);
         }
 
         setOnFileSaveInterface(this);

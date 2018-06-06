@@ -106,7 +106,7 @@ public class ScoreFragment2 extends BaseFragment {
 
         showLoadingDialog();
         if (getArguments() != null) {
-            score_Model = (ScoreModel) getArguments().getSerializable("id");
+            score_Model = (ScoreModel) getArguments().getSerializable("item");
         }
         if (score_Model != null) {
             if (!TextUtils.isEmpty(score_Model.getFragment2())) {
@@ -120,7 +120,7 @@ public class ScoreFragment2 extends BaseFragment {
                 @Override
                 public <T> void onFinish(List<T> t) {
                     List<ScoreModel> list = (List<ScoreModel>) t;
-                    if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
+                    if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size()-1).isSave_success()) {
                         dismissLoadingDialog();
                     } else {
                         ScoreModel scoreModel = list.get(list.size() - 1);
@@ -154,41 +154,41 @@ public class ScoreFragment2 extends BaseFragment {
         editText10.setText(inputModel2.getFragment_input10());
         editText11.setText(inputModel2.getFragment_input11());
         editText12.setText(inputModel2.getFragment_input12());
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input1())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input1())) {
             suggest_editText1.setText(inputModel2.getSuggest_fragment_input1());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input2())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input2())) {
             suggest_editText2.setText(inputModel2.getSuggest_fragment_input2());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input3())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input3())) {
             suggest_editText3.setText(inputModel2.getSuggest_fragment_input3());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input4())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input4())) {
             suggest_editText4.setText(inputModel2.getSuggest_fragment_input4());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input5())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input5())) {
             suggest_editText5.setText(inputModel2.getSuggest_fragment_input5());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input6())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input6())) {
             suggest_editText6.setText(inputModel2.getSuggest_fragment_input6());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input7())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input7())) {
             suggest_editText7.setText(inputModel2.getSuggest_fragment_input7());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input8())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input8())) {
             suggest_editText8.setText(inputModel2.getSuggest_fragment_input8());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input9())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input9())) {
             suggest_editText9.setText(inputModel2.getSuggest_fragment_input9());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input10())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input10())) {
             suggest_editText10.setText(inputModel2.getSuggest_fragment_input10());
         }
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input11())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input11())) {
             suggest_editText11.setText(inputModel2.getSuggest_fragment_input11());
         }
 
-        if (TextUtils.isEmpty(inputModel2.getSuggest_fragment_input12())) {
+        if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input12())) {
             suggest_editText12.setText(inputModel2.getSuggest_fragment_input12());
         }
 
@@ -198,6 +198,7 @@ public class ScoreFragment2 extends BaseFragment {
         if (!TextUtils.isEmpty(inputModel2.getProblem_input())) {
             problem_edit.setText(inputModel2.getProblem_input());
         }
+
     }
 
     public boolean verfyEdit(EditText editText, int maxValue, int minValue) {
@@ -375,7 +376,7 @@ public class ScoreFragment2 extends BaseFragment {
             @Override
             public <T> void onFinish(List<T> t) {
                 List<ScoreModel> list = (List<ScoreModel>) t;
-                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
+                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size() - 1).isSave_success()) {
                     ScoreModel scoreModel = new ScoreModel();
                     scoreModel.setUser_id(UserManager.getUser(getContext()).getId());
                     scoreModel.setFragment2(str);
