@@ -89,7 +89,7 @@ public class ScoreFragment5 extends BaseFragment {
             score_Model = (ScoreModel) getArguments().getSerializable("item");
         }
         if (score_Model != null) {
-            if (!TextUtils.isEmpty(score_Model.getFragment4())) {
+            if (!TextUtils.isEmpty(score_Model.getFragment5())) {
                 Gson gson = new Gson();
                 InputModel5 inputModel2 = gson.fromJson(score_Model.getFragment5(), InputModel5.class);
                 updateEdit(inputModel2);
@@ -198,13 +198,13 @@ public class ScoreFragment5 extends BaseFragment {
     }
 
 
-    public void save() {
+    public InputModel5 save() {
 
         if( verfyEdit(editText1, 35, 0)&& verfyEdit(editText2, 20, 0)&&verfyEdit(editText3, 10, 0)&&verfyEdit(editText4, 10, 0)&&verfyEdit(editText5, 10, 0)&&
                 verfyEdit(editText6, 8, 0)&& verfyEdit(editText7, 7, 0)) {
 
         }else{
-            return;
+            return null;
         }
 
 //        if (TextUtils.isEmpty(editText1.getText().toString())) {
@@ -235,7 +235,6 @@ public class ScoreFragment5 extends BaseFragment {
 //            Toast.makeText(getContext(), "请填写所有分数", Toast.LENGTH_SHORT).show();
 //            return;
 //        }
-        ((ScoreActivity) getActivity()).showLoadingDialog();
 
         model = new InputModel5();
         model.setFragment_input1(editText1.getText().toString());
@@ -274,55 +273,56 @@ public class ScoreFragment5 extends BaseFragment {
             model.setProblem_input(problem_edit.getText().toString());
         }
         model.setTime(System.currentTimeMillis() / 1000);
-        Gson gson = new Gson();
-        final String str = gson.toJson(model);
-        if (score_Model != null) {
-            score_Model.setFragment5(str);
-            score_Model.updateAsync(score_Model.getId()).listen(new UpdateOrDeleteCallback() {
-                @Override
-                public void onFinish(int rowsAffected) {
-                    ((ScoreActivity) getActivity()).dismissLoadingDialog();
-//                    Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
-//                    ExcelUtils.writeExecleToFile(getActivity(),score_Model);
-                }
-            });
-            return;
-        }
-        DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
-            @Override
-            public <T> void onFinish(List<T> t) {
-                List<ScoreModel> list = (List<ScoreModel>) t;
-                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size() - 1).isSave_success()) {
-                    ScoreModel scoreModel = new ScoreModel();
-                    scoreModel.setUser_id(UserManager.getUser(getContext()).getId());
-                    scoreModel.setFragment5(str);
-                    scoreModel.saveAsync().listen(new SaveCallback() {
-                        @Override
-                        public void onFinish(boolean success) {
-                            //
-                            ((ScoreActivity) getActivity()).dismissLoadingDialog();
-                            Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                } else {
-                    ScoreModel scoreModel = list.get(list.size() - 1);
-                    scoreModel.setFragment5(str);
-                    if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                        scoreModel.setAllDone(true);
-//                        ((ScoreActivity) getActivity()).showLoadingDialog();
-//                        new MyTask(getActivity(),scoreModel).execute();
-                    }
-                    ((ScoreActivity) getActivity()).showLoadingDialog();
-                    scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
-                        @Override
-                        public void onFinish(int rowsAffected) {
-                            ((ScoreActivity) getActivity()).dismissLoadingDialog();
-                            Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }
-        });
+        return model;
+//        Gson gson = new Gson();
+//        final String str = gson.toJson(model);
+//        if (score_Model != null) {
+//            score_Model.setFragment5(str);
+//            score_Model.updateAsync(score_Model.getId()).listen(new UpdateOrDeleteCallback() {
+//                @Override
+//                public void onFinish(int rowsAffected) {
+//                    ((ScoreActivity) getActivity()).dismissLoadingDialog();
+////                    Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
+////                    ExcelUtils.writeExecleToFile(getActivity(),score_Model);
+//                }
+//            });
+//            return;
+//        }
+//        DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
+//            @Override
+//            public <T> void onFinish(List<T> t) {
+//                List<ScoreModel> list = (List<ScoreModel>) t;
+//                if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()||list.get(list.size() - 1).isSave_success()) {
+//                    ScoreModel scoreModel = new ScoreModel();
+//                    scoreModel.setUser_id(UserManager.getUser(getContext()).getId());
+//                    scoreModel.setFragment5(str);
+//                    scoreModel.saveAsync().listen(new SaveCallback() {
+//                        @Override
+//                        public void onFinish(boolean success) {
+//                            //
+//                            ((ScoreActivity) getActivity()).dismissLoadingDialog();
+//                            Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//                } else {
+//                    ScoreModel scoreModel = list.get(list.size() - 1);
+//                    scoreModel.setFragment5(str);
+//                    if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                        scoreModel.setAllDone(true);
+////                        ((ScoreActivity) getActivity()).showLoadingDialog();
+////                        new MyTask(getActivity(),scoreModel).execute();
+//                    }
+//                    ((ScoreActivity) getActivity()).showLoadingDialog();
+//                    scoreModel.updateAsync(scoreModel.getId()).listen(new UpdateOrDeleteCallback() {
+//                        @Override
+//                        public void onFinish(int rowsAffected) {
+//                            ((ScoreActivity) getActivity()).dismissLoadingDialog();
+//                            Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//                }
+//            }
+//        });
 
     }
 

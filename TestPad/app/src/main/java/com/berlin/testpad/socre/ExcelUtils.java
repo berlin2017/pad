@@ -474,12 +474,12 @@ public class ExcelUtils {
 
             Cell row3_cell4 = row3.createCell(3);
             row3_cell4.setCellValue(inputModel3.getFragment_input2());
+
             Cell row3_suggest_cell4 = row3_suggest.createCell(3);
             row3_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input2());
 
-            Cell row4_cell4 = row3.createCell(3);
+            Cell row4_cell4 = row4.createCell(3);
             row4_cell4.setCellValue(inputModel3.getFragment_input3());
-
 
             Cell row4_suggest_cell4 = row4_suggest.createCell(3);
             row4_suggest_cell4.setCellValue(inputModel3.getSuggest_fragment_input3());
@@ -536,7 +536,7 @@ public class ExcelUtils {
             row3_suggest_cell5.setCellValue(inputModel4.getSuggest_fragment_input2());
 
 
-            Cell row4_cell5 = row3.createCell(4);
+            Cell row4_cell5 = row4.createCell(4);
             row4_cell5.setCellValue(inputModel4.getFragment_input3());
 
             Cell row4_suggest_cell5 = row4_suggest.createCell(4);
@@ -603,11 +603,8 @@ public class ExcelUtils {
             Cell row3_suggest_cell6 = row3_suggest.createCell(5);
             row3_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input2());
 
-            Cell row4_cell6 = row3.createCell(5);
+            Cell row4_cell6 = row4.createCell(5);
             row4_cell6.setCellValue(inputModel5.getFragment_input3());
-
-            Cell row3_cell6 = row3.createCell(5);
-            row3_cell6.setCellValue(inputModel5.getFragment_input2());
 
             Cell row4_suggest_cell6 = row4_suggest.createCell(5);
             row4_suggest_cell6.setCellValue(inputModel5.getSuggest_fragment_input3());

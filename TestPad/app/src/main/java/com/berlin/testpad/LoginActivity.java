@@ -123,7 +123,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 users = (List<User>) t;
                 dismissLoadingDialog();
                 if (users != null && users.size() > 0) {
-                    User user = users.get(0);
+                    User user = users.get(users.size()-1);
                     if (user.isRemebered()) {
                         checkBox.setChecked(true);
                         mEmailView.setText(user.getUsername());
