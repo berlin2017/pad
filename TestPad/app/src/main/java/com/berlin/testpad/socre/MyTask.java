@@ -2,6 +2,7 @@ package com.berlin.testpad.socre;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.berlin.testpad.socre.model.ScoreModel;
 
@@ -36,6 +37,7 @@ public class MyTask extends AsyncTask<Void, Void, Void> {
             public void onFinish(int rowsAffected) {
                 ScoreActivity scoreActivity = (ScoreActivity) context;
                 scoreActivity.dismissLoadingDialog();
+                Toast.makeText(context,"生成数据成功",Toast.LENGTH_SHORT).show();
             }
         });
     }

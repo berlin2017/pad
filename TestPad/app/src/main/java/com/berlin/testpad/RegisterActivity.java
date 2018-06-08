@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.berlin.testpad.user.User;
 
+import org.litepal.crud.DataSupport;
 import org.litepal.crud.callback.SaveCallback;
+
+import java.util.List;
 
 public class RegisterActivity extends BaseActivity {
 
@@ -126,6 +129,13 @@ public class RegisterActivity extends BaseActivity {
             User user = new User();
             user.setUsername(email);
             user.setPass(password);
+            List<User> list =  DataSupport.where("username = ?",email).find(User.class);
+            if (list!=null&&list.size()>0){
+                dismissLoadingDialog();
+                Toast.makeText(this,"用户已注册",Toast.LENGTH_SHORT).show();
+                mEmailView.requestFocus();
+                return;
+            }
             user.saveAsync().listen(new SaveCallback() {
                 @Override
                 public void onFinish(boolean success) {
