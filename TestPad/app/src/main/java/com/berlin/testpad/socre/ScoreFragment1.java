@@ -113,7 +113,42 @@ public class ScoreFragment1 extends BaseFragment {
 
     }
 
-    public boolean verfyEdit(EditText editText, int maxValue, int minValue) {
+    public boolean verfyEdit(final EditText editText, final int maxValue, final int minValue) {
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus){
+                    ViewParent viewParent = editText.getParent().getParent();
+                    if (viewParent instanceof TextInputLayout) {
+                        ((TextInputLayout) viewParent).setError(null);
+
+                    }
+                    if (TextUtils.isEmpty(editText.getText().toString())) {
+                        if (viewParent instanceof TextInputLayout) {
+                            ((TextInputLayout) viewParent).setError("不能为空");
+                        } else {
+                            Toast.makeText(getActivity(), "不能为空", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    if (Integer.parseInt(editText.getText().toString()) < minValue) {
+                        if (viewParent instanceof TextInputLayout) {
+                            ((TextInputLayout) viewParent).setError("不能小于" + minValue);
+
+                        } else {
+                            Toast.makeText(getActivity(), "不能小于" + minValue, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    if (Integer.parseInt(editText.getText().toString()) > maxValue) {
+                        if (viewParent instanceof TextInputLayout) {
+                            ((TextInputLayout) viewParent).setError("不能大于" + maxValue);
+
+                        } else {
+                            Toast.makeText(getActivity(), "不能大于" + maxValue + minValue, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
         ViewParent viewParent = editText.getParent().getParent();
         if (viewParent instanceof TextInputLayout) {
             ((TextInputLayout) viewParent).setError(null);

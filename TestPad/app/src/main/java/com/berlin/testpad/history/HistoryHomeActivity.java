@@ -103,7 +103,7 @@ public class HistoryHomeActivity extends BaseActivity {
                             HistoryModel historyModel = new HistoryModel();
                             historyModel.setId(model.getId());
                             InputModel2 inputModel1 = new Gson().fromJson(model.getFragment2(), InputModel2.class);
-                            historyModel.setName("保障设施");
+                            historyModel.setName("保障装备");
                             historyModel.setTime(inputModel1.getTime());
                             list.add(historyModel);
                         }
@@ -111,7 +111,7 @@ public class HistoryHomeActivity extends BaseActivity {
                             HistoryModel historyModel = new HistoryModel();
                             historyModel.setId(model.getId());
                             InputModel3 inputModel1 = new Gson().fromJson(model.getFragment3(), InputModel3.class);
-                            historyModel.setName("保障装备");
+                            historyModel.setName("保障设施");
                             historyModel.setTime(inputModel1.getTime());
                             list.add(historyModel);
                         }

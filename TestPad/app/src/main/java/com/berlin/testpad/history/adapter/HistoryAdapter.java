@@ -48,10 +48,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
             case "保障人员":
                 index = 0;
                 break;
-            case "保障设施":
+            case "保障装备":
                 index = 1;
                 break;
-            case "保障装备":
+            case "保障设施":
                 index = 2;
                 break;
             case "保障过程":

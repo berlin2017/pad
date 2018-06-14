@@ -65,7 +65,7 @@
                     android:background="@drawable/selector_radio_detail"
                     android:button="@null"
                     android:gravity="center"
-                    android:text="保障设施"
+                    android:text="保障装备"
                     android:textColor="@android:color/white" />
 
                 <RadioButton
@@ -77,7 +77,7 @@
                     android:background="@drawable/selector_radio_detail"
                     android:button="@null"
                     android:gravity="center"
-                    android:text="保障装备"
+                    android:text="保障设施"
                     android:textColor="@android:color/white" />
 
                 <RadioButton
@@ -166,20 +166,35 @@
                     android:textColor="@android:color/white"
                     android:textSize="17sp" />
 
+                <Button
+                    android:id="@+id/main_score_import_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/main_score_save_btn"
+                    android:background="@drawable/ic_score_btn"
+                    android:onClick="importFile"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="导入数据"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
                 <LinearLayout
                     android:id="@+id/main_socre_back"
-                    android:onClick="back"
-                    android:layout_margin="10dp"
-                    android:layout_toLeftOf="@id/main_score_save_btn"
-                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@id/main_score_import_btn"
+                    android:onClick="back">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
                         android:layout_margin="10dp"
                         android:layout_toLeftOf="@id/choose_back"
                         android:src="@drawable/ic_back_png" />
@@ -199,13 +214,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:visibility="gone"
-                    android:onClick="buildCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_margin="10dp"
                     android:layout_toLeftOf="@id/main_socre_back"
-                    android:layout_centerVertical="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:onClick="buildCode"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="30dp"

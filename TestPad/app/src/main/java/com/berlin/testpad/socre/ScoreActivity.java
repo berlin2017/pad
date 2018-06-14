@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
@@ -15,6 +19,10 @@ import android.widget.Toast;
 
 import com.berlin.testpad.BaseActivity;
 import com.berlin.testpad.R;
+import com.berlin.testpad.history.HistoryHomeActivity;
+import com.berlin.testpad.history.ItemDivider;
+import com.berlin.testpad.history.adapter.HistoryAdapter;
+import com.berlin.testpad.history.model.HistoryModel;
 import com.berlin.testpad.socre.model.InputModel1;
 import com.berlin.testpad.socre.model.InputModel2;
 import com.berlin.testpad.socre.model.InputModel3;
@@ -32,6 +40,7 @@ import org.litepal.crud.callback.FindMultiCallback;
 import org.litepal.crud.callback.SaveCallback;
 import org.litepal.crud.callback.UpdateOrDeleteCallback;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -40,7 +49,7 @@ import java.util.TreeMap;
  * Created by ahxmt on 2018/5/17.
  */
 
-public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFileInterface {
+public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFileInterface, ChooseHistoryAdapter.OnCHooseHistoryInterface {
 
     private RadioGroup radioGroup;
     private Map<Integer, Fragment> mFragments = new TreeMap<Integer, Fragment>();
@@ -48,6 +57,10 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
     private ImageView imageView;
     private int index;
     private ScoreModel scoreModel;
+    private RecyclerView recyclerView;
+    private ChooseHistoryAdapter historyAdapter;
+    private List<HistoryModel> data = new ArrayList<>();
+    private AlertDialog chooseDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -107,7 +120,7 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                         dismissLoadingDialog();
                     } else {
                         scoreModel = list.get(list.size() - 1);
-                        if(scoreModel.getUser_id() != UserManager.getUser(ScoreActivity.this).getId()){
+                        if (scoreModel.getUser_id() != UserManager.getUser(ScoreActivity.this).getId()) {
                             scoreModel = new ScoreModel();
                             scoreModel.setUser_id(UserManager.getUser(ScoreActivity.this).getId());
                         }
@@ -178,8 +191,8 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
         finish();
     }
 
-    public void saveOrUpdate(ScoreModel scoreModel1){
-        if(scoreModel1.getId() == 0){
+    public void saveOrUpdate(ScoreModel scoreModel1) {
+        if (scoreModel1.getId() == 0) {
             scoreModel1.saveAsync().listen(new SaveCallback() {
                 @Override
                 public void onFinish(boolean success) {
@@ -187,7 +200,7 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                     Toast.makeText(ScoreActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
                 }
             });
-        }else{
+        } else {
             scoreModel1.updateAsync(scoreModel1.getId()).listen(new UpdateOrDeleteCallback() {
                 @Override
                 public void onFinish(int rowsAffected) {
@@ -210,7 +223,7 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                 if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
                     scoreModel.setAllDone(true);
                 }
-               saveOrUpdate(scoreModel);
+                saveOrUpdate(scoreModel);
             } else {
                 dismissLoadingDialog();
             }
@@ -320,6 +333,76 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
 //        }
     }
 
+    public void importFile(View view) {
+
+        getList();
+    }
+
+    public void getList() {
+        showLoadingDialog();
+        data.clear();
+        DataSupport.where("user_id = ?", UserManager.getUser(ScoreActivity.this).getId() + "").findAsync(ScoreModel.class).listen(new FindMultiCallback() {
+            @Override
+            public <T> void onFinish(List<T> t) {
+
+                List<ScoreModel> list = (List<ScoreModel>) t;
+                for (ScoreModel item : list
+                        ) {
+
+                    HistoryModel historyModel = new HistoryModel();
+                    try {
+                        if (mCurrentFragment instanceof ScoreFragment1) {
+
+                            InputModel1 inputModel1 = new Gson().fromJson(item.getFragment1(), InputModel1.class);
+                            historyModel.setTime(inputModel1.getTime());
+                            historyModel.setName("保障人员");
+                            historyModel.setValue(item.getFragment1());
+                        } else if (mCurrentFragment instanceof ScoreFragment2) {
+                            InputModel2 inputModel2 = new Gson().fromJson(item.getFragment2(), InputModel2.class);
+                            historyModel.setTime(inputModel2.getTime());
+                            historyModel.setName("保障设施");
+                            historyModel.setValue(item.getFragment2());
+                        } else if (mCurrentFragment instanceof ScoreFragment3) {
+                            InputModel3 inputModel3 = new Gson().fromJson(item.getFragment3(), InputModel3.class);
+                            historyModel.setTime(inputModel3.getTime());
+                            historyModel.setName("保障装备");
+                            historyModel.setValue(item.getFragment3());
+                        } else if (mCurrentFragment instanceof ScoreFragment4) {
+                            InputModel4 inputModel4 = new Gson().fromJson(item.getFragment4(), InputModel4.class);
+                            historyModel.setTime(inputModel4.getTime());
+                            historyModel.setName("保障过程");
+                            historyModel.setValue(item.getFragment4());
+                        } else if (mCurrentFragment instanceof ScoreFragment5) {
+                            InputModel5 inputModel5 = new Gson().fromJson(item.getFragment5(), InputModel5.class);
+                            historyModel.setTime(inputModel5.getTime());
+                            historyModel.setName("保障制度");
+                            historyModel.setValue(item.getFragment5());
+                        }
+                        data.add(historyModel);
+                    } catch (Exception e) {
+
+                    }
+
+                }
+                dismissLoadingDialog();
+                if(data.size()==0){
+                    Toast.makeText(ScoreActivity.this, "没有可以导入的数据", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                View view1 = LayoutInflater.from(ScoreActivity.this).inflate(R.layout.dialog_choose_history, null);
+                recyclerView = view1.findViewById(R.id.dialog_history_recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(ScoreActivity.this));
+                historyAdapter = new ChooseHistoryAdapter(ScoreActivity.this, data);
+                historyAdapter.setOnCHooseHistoryInterface(ScoreActivity.this);
+                recyclerView.setAdapter(historyAdapter);
+                recyclerView.addItemDecoration(new ItemDivider(ScoreActivity.this, 2));
+                AlertDialog.Builder builder = new AlertDialog.Builder(ScoreActivity.this);
+                chooseDialog = builder.setView(view1).create();
+                chooseDialog.show();
+            }
+        });
+    }
+
     public void buildCode(View view) {
         if (imageView.getVisibility() == View.VISIBLE) {
             imageView.setVisibility(View.GONE);
@@ -355,4 +438,29 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
         new MyTask(this, scoreModel, path, name).execute();
     }
 
+    @Override
+    public void onChoosed(HistoryModel model) {
+        if (chooseDialog != null && chooseDialog.isShowing()) {
+            chooseDialog.dismiss();
+        }
+        if (mCurrentFragment instanceof ScoreFragment1) {
+            InputModel1 inputModel1 = new Gson().fromJson(model.getValue(), InputModel1.class);
+            ((ScoreFragment1) mCurrentFragment).updateEdit(inputModel1);
+
+        } else if (mCurrentFragment instanceof ScoreFragment2) {
+            InputModel2 inputModel2 = new Gson().fromJson(model.getValue(), InputModel2.class);
+            ((ScoreFragment2) mCurrentFragment).updateEdit(inputModel2);
+        } else if (mCurrentFragment instanceof ScoreFragment3) {
+            InputModel3 inputModel3 = new Gson().fromJson(model.getValue(), InputModel3.class);
+            ((ScoreFragment3) mCurrentFragment).updateEdit(inputModel3);
+        } else if (mCurrentFragment instanceof ScoreFragment4) {
+            InputModel4 inputModel4 = new Gson().fromJson(model.getValue(), InputModel4.class);
+            ((ScoreFragment4) mCurrentFragment).updateEdit(inputModel4);
+        } else if (mCurrentFragment instanceof ScoreFragment5) {
+            InputModel5 inputModel5 = new Gson().fromJson(model.getValue(), InputModel5.class);
+            ((ScoreFragment5) mCurrentFragment).updateEdit(inputModel5);
+        }
+
+        Toast.makeText(this, "数据已导入", Toast.LENGTH_SHORT).show();
+    }
 }

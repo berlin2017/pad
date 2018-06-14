@@ -135,10 +135,10 @@ public class ExcelUtils {
         cell1.setCellValue("保障人员");
 
         Cell cell2 = headerR.createCell(2);
-        cell2.setCellValue("保障设施");
+        cell2.setCellValue("保障装备");
 
         Cell cell3 = headerR.createCell(3);
-        cell3.setCellValue("保障装备");
+        cell3.setCellValue("保障设施");
 
         Cell cell4 = headerR.createCell(4);
         cell4.setCellValue("保障过程");

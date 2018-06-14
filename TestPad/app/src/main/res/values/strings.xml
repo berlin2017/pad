@@ -133,7 +133,7 @@
     <string name="row2_part3_11">四站装备“四无”率达到80%以上（20分）</string>
     <string name="row2_part3_12">质量管理信息、各种登记、统计和履历本齐全，填写完整规范，保管妥当（30分）</string>
 
-    <string name="row2_part2">保障设施（120分）</string>
+    <string name="row2_part2">保障装备（350分）</string>
 
     <string name="row2_part1">航空四站保障安全评价指标（1000分）</string>
 
@@ -188,7 +188,7 @@
     <string name="row3_part3_7">工作场所秩序井然、环境整洁，张挂、标志、标牌统一规范，装（设）备、箱架摆放整齐（10分）</string>
     <string name="row3_part3_8">四站质量管理室设施、设备配套齐全，状况良好,有专人负责，按照规定要求开展质量管理工作（30分）</string>
 
-    <string name="row3_part2">保障装备（350分）</string>
+    <string name="row3_part2">保障设施（120分）</string>
 
     <string name="row3_part1">航空四站保障安全评价指标（1000分）</string>
 
