@@ -130,6 +130,17 @@ public class ScoreFragment5 extends BaseFragment {
         editText5.setText(inputModel2.getFragment_input5());
         editText6.setText(inputModel2.getFragment_input6());
         editText7.setText(inputModel2.getFragment_input7());
+
+        suggest_editText1.setText("");
+        suggest_editText2.setText("");
+        suggest_editText3.setText("");
+        suggest_editText4.setText("");
+        suggest_editText5.setText("");
+        suggest_editText6.setText("");
+        suggest_editText7.setText("");
+        suggest_edit.setText("");
+        problem_edit.setText("");
+
         if (!TextUtils.isEmpty(inputModel2.getSuggest_fragment_input1())) {
             suggest_editText1.setText(inputModel2.getSuggest_fragment_input1());
         }

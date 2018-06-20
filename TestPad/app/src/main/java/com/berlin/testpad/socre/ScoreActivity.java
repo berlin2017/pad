@@ -298,11 +298,13 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
             return;
         }
 
-        if (scoreModel.isSave_success()) {
-            new MyTask(ScoreActivity.this, scoreModel, scoreModel.getFile_path(), scoreModel.getFile_name()).execute();
-        } else {
-            showNameDialog(scoreModel);
-        }
+//        if (scoreModel.isSave_success()) {
+//            new MyTask(ScoreActivity.this, scoreModel, scoreModel.getFile_path(), scoreModel.getFile_name()).execute();
+//        } else {
+//            showNameDialog(scoreModel);
+//        }
+
+        showNameDialog(scoreModel);
 
 //        if (scoreModel != null) {
 //            DataSupport.findAsync(ScoreModel.class, scoreModel.getId()).listen(new FindCallback() {
