@@ -212,75 +212,144 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
     }
 
     public void save(View view) {
-        showLoadingDialog();
+//        showLoadingDialog();
+//
+//        if (mCurrentFragment instanceof ScoreFragment1) {
+//            InputModel1 inputModel1 = ((ScoreFragment1) mCurrentFragment).save();
+//            if (inputModel1 != null) {
+//                Gson gson = new Gson();
+//                final String str = gson.toJson(inputModel1);
+//                scoreModel.setFragment1(str);
+//                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                    scoreModel.setAllDone(true);
+//                }
+//                saveOrUpdate(scoreModel);
+//            } else {
+//                dismissLoadingDialog();
+//            }
+//        } else if (mCurrentFragment instanceof ScoreFragment2) {
+//            InputModel2 inputModel2 = ((ScoreFragment2) mCurrentFragment).save();
+//            if (inputModel2 != null) {
+//                Gson gson = new Gson();
+//                final String str = gson.toJson(inputModel2);
+//                scoreModel.setFragment2(str);
+//                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                    scoreModel.setAllDone(true);
+//                }
+//                saveOrUpdate(scoreModel);
+//            } else {
+//                dismissLoadingDialog();
+//            }
+//        } else if (mCurrentFragment instanceof ScoreFragment3) {
+//            InputModel3 inputModel3 = ((ScoreFragment3) mCurrentFragment).save();
+//            if (inputModel3 != null) {
+//                Gson gson = new Gson();
+//                final String str = gson.toJson(inputModel3);
+//                scoreModel.setFragment3(str);
+//                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                    scoreModel.setAllDone(true);
+//                }
+//                saveOrUpdate(scoreModel);
+//            } else {
+//                dismissLoadingDialog();
+//            }
+//        } else if (mCurrentFragment instanceof ScoreFragment4) {
+//            InputModel4 inputModel4 = ((ScoreFragment4) mCurrentFragment).save();
+//            if (inputModel4 != null) {
+//                Gson gson = new Gson();
+//                final String str = gson.toJson(inputModel4);
+//                scoreModel.setFragment4(str);
+//                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                    scoreModel.setAllDone(true);
+//                }
+//                saveOrUpdate(scoreModel);
+//            } else {
+//                dismissLoadingDialog();
+//            }
+//        } else if (mCurrentFragment instanceof ScoreFragment5) {
+//            InputModel5 inputModel5 = ((ScoreFragment5) mCurrentFragment).save();
+//            if (inputModel5 != null) {
+//                Gson gson = new Gson();
+//                final String str = gson.toJson(inputModel5);
+//                scoreModel.setFragment5(str);
+//                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+//                    scoreModel.setAllDone(true);
+//                }
+//                saveOrUpdate(scoreModel);
+//            } else {
+//                dismissLoadingDialog();
+//            }
+//        }
+//
+//
+//        DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
+//            @Override
+//            public <T> void onFinish(List<T> t) {
+//                Log.e("all", t.toString());
+//            }
+//        });
 
-        if (mCurrentFragment instanceof ScoreFragment1) {
-            InputModel1 inputModel1 = ((ScoreFragment1) mCurrentFragment).save();
+        saveAll();
+
+    }
+
+    public void saveAll(){
+        showLoadingDialog();
+        if(mFragments.get(R.id.main_radiobutton1)!=null&&mFragments.get(R.id.main_radiobutton1) instanceof ScoreFragment1){
+            ScoreFragment1 fragment = (ScoreFragment1) mFragments.get(R.id.main_radiobutton1);
+            InputModel1 inputModel1 = fragment.save();
             if (inputModel1 != null) {
                 Gson gson = new Gson();
                 final String str = gson.toJson(inputModel1);
                 scoreModel.setFragment1(str);
-                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                    scoreModel.setAllDone(true);
-                }
-                saveOrUpdate(scoreModel);
-            } else {
-                dismissLoadingDialog();
             }
-        } else if (mCurrentFragment instanceof ScoreFragment2) {
-            InputModel2 inputModel2 = ((ScoreFragment2) mCurrentFragment).save();
+        }
+
+        if(mFragments.get(R.id.main_radiobutton2)!=null&&mFragments.get(R.id.main_radiobutton2) instanceof ScoreFragment2){
+            ScoreFragment2 fragment = (ScoreFragment2) mFragments.get(R.id.main_radiobutton2);
+            InputModel2 inputModel2 = fragment.save();
             if (inputModel2 != null) {
                 Gson gson = new Gson();
                 final String str = gson.toJson(inputModel2);
                 scoreModel.setFragment2(str);
-                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                    scoreModel.setAllDone(true);
-                }
-                saveOrUpdate(scoreModel);
-            } else {
-                dismissLoadingDialog();
             }
-        } else if (mCurrentFragment instanceof ScoreFragment3) {
-            InputModel3 inputModel3 = ((ScoreFragment3) mCurrentFragment).save();
+        }
+
+        if(mFragments.get(R.id.main_radiobutton3)!=null&&mFragments.get(R.id.main_radiobutton3) instanceof ScoreFragment3){
+            ScoreFragment3 fragment = (ScoreFragment3) mFragments.get(R.id.main_radiobutton3);
+            InputModel3 inputModel3 = fragment.save();
             if (inputModel3 != null) {
                 Gson gson = new Gson();
                 final String str = gson.toJson(inputModel3);
                 scoreModel.setFragment3(str);
-                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                    scoreModel.setAllDone(true);
-                }
-                saveOrUpdate(scoreModel);
-            } else {
-                dismissLoadingDialog();
             }
-        } else if (mCurrentFragment instanceof ScoreFragment4) {
-            InputModel4 inputModel4 = ((ScoreFragment4) mCurrentFragment).save();
+        }
+
+        if(mFragments.get(R.id.main_radiobutton4)!=null&&mFragments.get(R.id.main_radiobutton4) instanceof ScoreFragment4){
+            ScoreFragment4 fragment = (ScoreFragment4) mFragments.get(R.id.main_radiobutton4);
+            InputModel4 inputModel4 = fragment.save();
             if (inputModel4 != null) {
                 Gson gson = new Gson();
                 final String str = gson.toJson(inputModel4);
                 scoreModel.setFragment4(str);
-                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                    scoreModel.setAllDone(true);
-                }
-                saveOrUpdate(scoreModel);
-            } else {
-                dismissLoadingDialog();
             }
-        } else if (mCurrentFragment instanceof ScoreFragment5) {
-            InputModel5 inputModel5 = ((ScoreFragment5) mCurrentFragment).save();
+
+        }
+
+        if(mFragments.get(R.id.main_radiobutton5)!=null&&mFragments.get(R.id.main_radiobutton5) instanceof ScoreFragment5){
+            ScoreFragment5 fragment = (ScoreFragment5) mFragments.get(R.id.main_radiobutton5);
+            InputModel5 inputModel5 = fragment.save();
             if (inputModel5 != null) {
                 Gson gson = new Gson();
                 final String str = gson.toJson(inputModel5);
                 scoreModel.setFragment5(str);
-                if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
-                    scoreModel.setAllDone(true);
-                }
-                saveOrUpdate(scoreModel);
-            } else {
-                dismissLoadingDialog();
             }
         }
 
+        if (!TextUtils.isEmpty(scoreModel.getFragment1()) && !TextUtils.isEmpty(scoreModel.getFragment2()) && !TextUtils.isEmpty(scoreModel.getFragment3()) && !TextUtils.isEmpty(scoreModel.getFragment4()) && !TextUtils.isEmpty(scoreModel.getFragment5())) {
+            scoreModel.setAllDone(true);
+        }
+        saveOrUpdate(scoreModel);
 
         DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
             @Override
@@ -288,11 +357,11 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
                 Log.e("all", t.toString());
             }
         });
-
     }
 
     public void saveFile(View view) {
-//        showLoadingDialog();
+        saveAll();
+
         if (TextUtils.isEmpty(scoreModel.getFragment1()) && TextUtils.isEmpty(scoreModel.getFragment2()) && TextUtils.isEmpty(scoreModel.getFragment3()) && TextUtils.isEmpty(scoreModel.getFragment4()) && TextUtils.isEmpty(scoreModel.getFragment5())) {
             Toast.makeText(ScoreActivity.this, "请填写数据", Toast.LENGTH_SHORT).show();
             return;
@@ -306,33 +375,7 @@ public class ScoreActivity extends BaseActivity implements BaseActivity.OnSaveFi
 
         showNameDialog(scoreModel);
 
-//        if (scoreModel != null) {
-//            DataSupport.findAsync(ScoreModel.class, scoreModel.getId()).listen(new FindCallback() {
-//                @Override
-//                public <T> void onFinish(T t) {
-//                    dismissLoadingDialog();
-//                    scoreModel = (ScoreModel) t;
-//                    showNameDialog(scoreModel);
-//                }
-//            });
-//        } else {
-//            DataSupport.findAllAsync(ScoreModel.class).listen(new FindMultiCallback() {
-//                @Override
-//                public <T> void onFinish(List<T> t) {
-//                    dismissLoadingDialog();
-//                    List<ScoreModel> list = (List<ScoreModel>) t;
-//                    if (list == null || list.size() == 0 || list.get(list.size() - 1).isAllDone()) {
-//
-//                    }
-//                    ScoreModel s = list.get(list.size() - 1);
-//                    if (s.isSave_success()) {
-//                        new MyTask(ScoreActivity.this, scoreModel, s.getFile_path(), s.getFile_name()).execute();
-//                    } else {
-//                        showNameDialog(s);
-//                    }
-//                }
-//            });
-//        }
+
     }
 
     public void importFile(View view) {
